@@ -25,7 +25,7 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
             // Set default color for "background_color" ...
             $wp_customize->get_setting( 'background_color' )->default = "#750743";
             // ... and add the description to its control.
-            $wp_customize->get_control( 'background_color' )->description = __( 'Color for the whole background of the page.', 'hamilton' );
+            $wp_customize->get_control( 'background_color' )->description = __( 'Color for the whole background of the page.', 'hamilton-child' );
             // Secondary background color
             $wp_customize->add_setting( 'hamilton_child_bg_sec_color', [
                 'default'    => '#7c005d',
@@ -35,10 +35,10 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
             $wp_customize->add_control( new WP_Customize_Color_Control(
                 $wp_customize,
                 'hamilton_child_bg_sec_color', [
-                    'label'       => __( 'Secondary background color', 'hamilton' ),
+                    'label'       => __( 'Secondary background color', 'hamilton-child' ),
                     'section'     => 'colors',
                     'settings'    => 'hamilton_child_bg_sec_color',
-                    'description' => __( 'This color will be used in blog posts listing for background of posts without thumbnail.', 'hamilton' ),
+                    'description' => __( 'This color will be used in blog posts listing for background of posts without thumbnail.', 'hamilton-child' ),
                 ]
             ));
 
@@ -51,10 +51,10 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
             $wp_customize->add_control( new WP_Customize_Color_Control(
                 $wp_customize,
                 'hamilton_child_fg_color', [
-                    'label'       => __( 'Foreground color', 'hamilton' ),
+                    'label'       => __( 'Foreground color', 'hamilton-child' ),
                     'section'     => 'colors',
                     'settings'    => 'hamilton_child_fg_color',
-                    'description' => __( 'Color which will be used as a main font color.', 'hamilton' ),
+                    'description' => __( 'Color which will be used as a main font color.', 'hamilton-child' ),
                 ]
             ));
         }

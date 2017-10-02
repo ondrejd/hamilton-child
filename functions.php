@@ -12,8 +12,14 @@ if( ! function_exists( 'hamilton_child_setup' ) ) :
 	 * @internal Setups the theme.
 	 * @return void
 	 * @since 1.0.0
+     * @uses get_stylesheet_directory
+     * @uses load_theme_textdomain
+     * @uses unregister_nav_menu
 	 */
     function hamilton_child_setup() {
+        // Localization
+        load_theme_textdomain( 'hamilton-child', get_stylesheet_directory() . '/languages' );
+        // Remove Hamilton's secondary menu
 		unregister_nav_menu( 'secondary-menu' );
     }
 endif;
