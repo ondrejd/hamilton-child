@@ -18,7 +18,7 @@
     // Foreground color
 	wp.customize( 'hamilton_child_fg_color', function( value ) {
 		value.bind( function( newval ) {
-			$( 'body a, body' ).css( 'color', newval );
+			$( 'body, body *, body a' ).css( 'color', newval );
 		} );
 	} );
 } )( jQuery );

@@ -22,19 +22,22 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
          * @uses WP_Customize_Color_Control
          */
         public static function register( $wp_customize ) {
+            // Set default color for "background_color" ...
+            $wp_customize->get_setting( 'background_color' )->default = "#750743";
+            // ... and add the description to its control.
+            $wp_customize->get_control( 'background_color' )->description = __( 'Color for the whole background of the page.', 'hamilton' );
             // Secondary background color
             $wp_customize->add_setting( 'hamilton_child_bg_sec_color', [
-                'default'    => '#333',
+                'default'    => '#7c005d',
                 'transport'	 => 'postMessage',
                 'capability' => 'edit_theme_options',
             ] );
             $wp_customize->add_control( new WP_Customize_Color_Control(
                 $wp_customize,
-                'hamilton_child_bg_sec_color_control', [
+                'hamilton_child_bg_sec_color', [
                     'label'       => __( 'Secondary background color', 'hamilton' ),
                     'section'     => 'colors',
                     'settings'    => 'hamilton_child_bg_sec_color',
-                    //'priority'   => 6,
                     'description' => __( 'This color will be used in blog posts listing for background of posts without thumbnail.', 'hamilton' ),
                 ]
             ));
@@ -47,11 +50,10 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
             ] );
             $wp_customize->add_control( new WP_Customize_Color_Control(
                 $wp_customize,
-                'hamilton_child_fg_color_control', [
+                'hamilton_child_fg_color', [
                     'label'       => __( 'Foreground color', 'hamilton' ),
                     'section'     => 'colors',
                     'settings'    => 'hamilton_child_fg_color',
-                    //'priority'    => 7,
                     'description' => __( 'Color which will be used as a main font color.', 'hamilton' ),
                 ]
             ));
