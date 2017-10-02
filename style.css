@@ -55,10 +55,8 @@ pre.code-snippet .style_127 {
  * Site footer.
  */
 #hamilton_child_footer_text {
-    border-top: 2px solid #fff;
     line-height: 1.1em;
-    margin-top: 2em;
-    opacity: 0.7;
+    margin-top: 3em;
     padding-top: 6em;
     text-align: left;
 }
