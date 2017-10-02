@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hamilton\n"
+"POT-Creation-Date: 2017-10-02 13:00+0200\n"
+"PO-Revision-Date: 2017-10-02 13:01+0200\n"
+"Last-Translator: \n"
+"Language-Team: Ondřej Doněk <ondrejd@gmail.com>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+"X-Poedit-SearchPathExcluded-1: languages\n"
+
+#: 404.php:9
+msgid "Error 404"
+msgstr "Chyba 404"
+
+#: 404.php:11
+msgid ""
+"The page you're looking for could not be found. It may have been removed, "
+"renamed, or maybe it didn't exist in the first place."
+msgstr ""
+"Stránka, kterou hledáte, nebyla nalezena. Buď už byla smazána, přejmenována "
+"nebo možná nikdy neexistovala."
+
+#: 404.php:15
+msgid "To the front page"
+msgstr "Úvodní stránka"
+
+#: comments.php:5
+msgid "Comments"
+msgstr "Komentáře"
+
+#: comments.php:32
+msgid "Comments closed"
+msgstr "Komentáře uzavřeny"
+
+#: content.php:30
+msgid "Sticky"
+msgstr "Lepící"
+
+#: footer.php:4 header.php:125
+msgid "Theme by"
+msgstr "Od "
+
+#: functions.php:40
+msgid "Primary Menu"
+msgstr "Hlavní nabídka"
+
+#: functions.php:41
+msgid "Secondary Menu"
+msgstr "Podružná nabídka"
+
+#: functions.php:237
+msgid "Archives"
+msgstr "Archivy"
+
+#: functions.php:254
+msgid "Theme Options"
+msgstr "Možnosti tématu"
+
+#: functions.php:257
+msgid "Customize the theme settings for Hamilton."
+msgstr "Upravte nastavení tématu vzhledu Hamilton."
+
+#: functions.php:271
+msgid "Dark Mode"
+msgstr "Tmavý mód"
+
+#: functions.php:272
+msgid ""
+"Displays the site with white text and black background. If Background Color "
+"is set, only the text color will change."
+msgstr ""
+"Zobrazí stránky s bílým textem a černým pozadím. Pokud je nastavena barva "
+"pozadí, změní se jen barva textu."
+
+#: functions.php:286
+msgid "Show Primary Menu in the Header"
+msgstr "Zobrazit v hlavičce hlavní nabídkou"
+
+#: functions.php:287
+msgid ""
+"Replace the navigation toggle in the header with the Primary Menu on desktop."
+msgstr ""
+"Na stolních počítačích nahradí skrývací menu v hlavičce hlavním nabídkou."
+
+#: functions.php:301
+msgid "Three Columns"
+msgstr "Tři sloupce"
+
+#: functions.php:302
+msgid "Check to use three columns in the post grid on desktop."
+msgstr ""
+"Zaškrtněte pokud chcete na stolních počítačích zobrazit v mřížce tři sloupce."
+
+#: functions.php:316
+msgid "Show Preview Titles"
+msgstr "Zobrazit názvy ukázek"
+
+#: functions.php:317
+msgid "Check to always show the titles in the post previews."
+msgstr ""
+"Zaškrtněte pokud chcete, aby názvy ukázek příspěvků byly vždy zobrazeny."
+
+#: functions.php:331
+msgid "Front Page Title"
+msgstr "Název úvodní stránky"
+
+#: functions.php:332
+msgid ""
+"The title you want shown on the front page when the \"Front page displays\" "
+"setting is set to \"Your latest posts\" in Settings > Reading."
+msgstr ""
+"Název, který chcete aby se zobrazil na úvodní stránce, pokud máte nastaveno "
+"zobrazení posledních příspěvků (v Nastavení > Čtení)."
+
+#: index.php:26
+#, php-format
+msgid "Search: %s"
+msgstr "Najít: %s"
+
+#: index.php:27
+#, php-format
+msgid "We found %s results matching your search."
+msgstr "Nalezli jsme %s výsledků, které odpovídají vašemu zadání."
+
+#: index.php:37
+msgid "No results found"
+msgstr "Nebyly nalezeny žádné výsledky."
+
+#: index.php:38
+#, php-format
+msgid "We could not find any results for the search query \"%s\"."
+msgstr "Na dotaz \"%s\" jsme nenašli žádné výsledky."
+
+#: pagination.php:7
+msgid "Newer"
+msgstr "Novější"
+
+#: pagination.php:13
+msgid "Older"
+msgstr "Starší"
+
+#: singular.php:27
+msgid "In"
+msgstr "V"
+
+#: singular.php:32
+msgid "Add Comment"
+msgstr "Přidat komentář"
+
+#: singular.php:33
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: singular.php:34
+#, php-format
+msgid "%s Comments"
+msgstr "%s komentářů"
+
+#: singular.php:64
+msgid "Pages:"
+msgstr "Stránky:"
