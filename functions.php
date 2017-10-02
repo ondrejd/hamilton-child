@@ -7,6 +7,10 @@
  * @since 1.0.0
  */
 
+if( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if( ! function_exists( 'hamilton_child_setup' ) ) :
 	/**
 	 * @internal Setups the theme.

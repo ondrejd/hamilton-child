@@ -1,22 +1,26 @@
-<!DOCTYPE html>
+<?php
+/**
+ * @author Ondřej Doněk <ondrejd@gmail.com>
+ * @link https://github.com/ondrejd/https://github.com/ondrejd/hamilton-child for the canonical source repository
+ * @license https://www.gnu.org/licenses/gpl-3.0.en.html GNU General Public License 3.0
+ * @package hamilton-child
+ * @since 1.0.0
+ */
 
+if( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+?><!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
-
 	<head>
-
 		<meta http-equiv="content-type" content="<?php bloginfo( 'html_type' ); ?>" charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-
         <link rel="profile" href="http://gmpg.org/xfn/11">
-
-		<?php wp_head(); ?>
-
+		<?php wp_head() ?>
 	</head>
-
-	<body <?php body_class(); ?>>
-
+	<body <?php body_class() ?>>
         <header class="section-inner site-header group">
-
 			<?php if ( function_exists( 'the_custom_logo' ) && get_theme_mod( 'custom_logo' ) ) :
 				$logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 				$logo_url = $logo[0];
@@ -26,36 +30,35 @@
 
 				// Determine which height logo we need the mobile nav to adjust for
 				$adjusted_height = $height < 100 ? $height : 100;
-				?>
-
-				<style>
+			?>
+			<style>
+				.site-nav {
+					padding-top: <?php echo $adjusted_height + 160; ?>px;
+				}
+				@media ( max-width: 620px ) {
 					.site-nav {
-						padding-top: <?php echo $adjusted_height + 160; ?>px;
+						padding-top: <?php echo $adjusted_height + 100; ?>px;
 					}
-					@media ( max-width: 620px ) {
-						.site-nav {
-							padding-top: <?php echo $adjusted_height + 100; ?>px;
-						}
-					}
-				</style>
+				}
+			</style>
 
-				<a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>" class="custom-logo" style="background-image: url( <?php echo $logo_url; ?> );">
-					<img src="<?php echo $logo_url; ?>" />
-				</a>
+			<a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>" class="custom-logo" style="background-image: url( <?php echo $logo_url; ?> );">
+				<img src="<?php echo $logo_url; ?>" />
+			</a>
 
 			<?php elseif ( is_singular() ) : ?>
 
-            	<h1 class="site-title">
-					<a href="<?php echo esc_url( home_url() ); ?>" class="site-name"><?php bloginfo( 'name' ); ?></a>
-					<small class="site-description"><?php bloginfo( 'description' ); ?></small>
-				</h1>
+        	<h1 class="site-title">
+				<a href="<?php echo esc_url( home_url() ); ?>" class="site-name"><?php bloginfo( 'name' ); ?></a>
+				<small class="site-description"><?php bloginfo( 'description' ); ?></small>
+			</h1>
 
 			<?php else : ?>
 
-				<h2 class="site-title">
-					<a href="<?php echo esc_url( home_url() ); ?>" class="site-name"><?php bloginfo( 'name' ); ?></a>
-					<small class="site-description"><?php bloginfo( 'description' ); ?></small>
-				</h2>
+			<h2 class="site-title">
+				<a href="<?php echo esc_url( home_url() ); ?>" class="site-name"><?php bloginfo( 'name' ); ?></a>
+				<small class="site-description"><?php bloginfo( 'description' ); ?></small>
+			</h2>
 
 			<?php endif; ?>
 
@@ -81,20 +84,15 @@
 				endif;
 				?>
 			</ul>
-
         </header> <!-- header -->
-
 		<?php
 		$bg_declaration = "";
 		if ( get_background_color() && get_background_color() != 'ffffff' ) {
 			$bg_declaration = ' style="background-color: #' . get_background_color() . ';"';
 		}
 		?>
-
 		<nav class="site-nav"<?php echo $bg_declaration; ?>>
-
 			<div class="section-inner menus group">
-
 				<?php
 				if ( has_nav_menu( 'primary-menu' ) ) :
 					wp_nav_menu( array(
@@ -120,18 +118,11 @@
 					) );
 				}
 				?>
-
 			</div>
-
 			<footer<?php echo $bg_declaration; ?>>
-
 				<div class="section-inner">
-
 					<p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>" class="site-name"><?php bloginfo( 'name' ); ?></a></p>
 					<p><?php _e( 'Theme by', 'hamilton' ); ?> <a href="http://www.andersnoren.se">Anders Nor&eacute;n</a></p>
-
 				</div>
-
 			</footer>
-
 		</nav>

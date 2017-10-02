@@ -7,6 +7,10 @@
  * @since 1.0.0
  */
 
+if( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
     /**
      * Class for dealing with WordPress Theme Customizer.
@@ -69,6 +73,21 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'section'     => 'hamilton_options',
                 'label'       => __( 'Show site description', 'hamilton-child' ),
                 'description' => __( 'Check if you want to show site description just below the site title.', 'hamilton-child' ),
+            ] );
+
+            // Footer text
+            $wp_customize->add_setting( 'hamilton_child_footer_text', [
+                'default'           => __( '&copy; 2017 <a href="mailto:ondrej.donek@gmail.com">Ondřej Doněk</a>.<br>Theme derrived from <strong>Hamilton</strong> theme by <a href="http://www.andersnoren.se" target="_BLANK">Anders Norén</a>.', 'hamilton-child' ),
+                'capability' 		=> 'edit_theme_options',
+                //'sanitize_callback' => 'sanitize_textarea_field',
+                'transport'			=> 'postMessage'
+            ] );
+            $wp_customize->add_control( 'hamilton_child_footer_text', [
+                'type'        => 'textarea',
+                'section'     => 'hamilton_options',
+                'label'       => __( 'Footer text', 'hamilton-child' ),
+                'description' => __( 'Set your custom footer text. You can use also simple <abbr title="Hyper Text Markup Language">HTML</abbr>.', 'hamilton-child' ),
+                'priority'    => 100,
             ] );
         }
 

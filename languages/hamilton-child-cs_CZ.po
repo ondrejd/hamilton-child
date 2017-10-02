@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hamilton-child\n"
-"POT-Creation-Date: 2017-10-02 13:34+0200\n"
-"PO-Revision-Date: 2017-10-02 13:34+0200\n"
+"POT-Creation-Date: 2017-10-02 15:12+0200\n"
+"PO-Revision-Date: 2017-10-02 15:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ondřej Doněk <ondrejd@gmail.com>\n"
 "Language: cs_CZ\n"
@@ -18,15 +18,15 @@ msgstr ""
 "X-Poedit-SearchPath-1: includes\n"
 "X-Poedit-SearchPath-2: templates\n"
 
-#: includes/Hamilton_Child_Customizer.php:28
+#: includes/Hamilton_Child_Customizer.php:32
 msgid "Color for the whole background of the page."
 msgstr "Barva pro hlavní pozadí celé stránky."
 
-#: includes/Hamilton_Child_Customizer.php:39
+#: includes/Hamilton_Child_Customizer.php:43
 msgid "Secondary background color"
 msgstr "Dodatečná barva pozadí"
 
-#: includes/Hamilton_Child_Customizer.php:41
+#: includes/Hamilton_Child_Customizer.php:45
 msgid ""
 "This color will be used in blog posts listing for background of posts "
 "without thumbnail."
@@ -34,18 +34,52 @@ msgstr ""
 "Tato barva je použita například jako pozadí pro jednotlivé příspěvky, které "
 "nemají připojený obrázek, v jejich výpisu."
 
-#: includes/Hamilton_Child_Customizer.php:54
+#: includes/Hamilton_Child_Customizer.php:58
 msgid "Foreground color"
 msgstr "Barva textu"
 
-#: includes/Hamilton_Child_Customizer.php:56
+#: includes/Hamilton_Child_Customizer.php:60
 msgid "Color which will be used as a main font color."
 msgstr "Barva, která bude použita jako hlavní barva pro text."
 
-#: includes/Hamilton_Child_Customizer.php:70
+#: includes/Hamilton_Child_Customizer.php:74
 msgid "Show site description"
 msgstr "Zobrazit popis webu"
 
-#: includes/Hamilton_Child_Customizer.php:71
+#: includes/Hamilton_Child_Customizer.php:75
 msgid "Check if you want to show site description just below the site title."
 msgstr "Zaškrtněte, pokud pod hlavním názvem chcete zobrazit popis webu."
+
+#: includes/Hamilton_Child_Customizer.php:80
+msgid ""
+"&copy; 2017 <a href=\"mailto:ondrej.donek@gmail.com\">Ondřej Doněk</a>."
+"<br>Theme derrived from <strong>Hamilton</strong> theme by <a href=\"http://"
+"www.andersnoren.se\" target=\"_BLANK\">Anders Norén</a>."
+msgstr ""
+"&copy; 2017<a href=\"mailto:ondrej.donek@gmail.com\">Ondřej Doněk</a>."
+"<br>Téma vzhledu bylo odvozeno od tématu <strong>Hamilton</strong> od <a "
+"href=\"http://www.andersnoren.se\" target=\"_BLANK\">Anders Norén</a>."
+
+#: includes/Hamilton_Child_Customizer.php:88
+msgid "Footer text"
+msgstr "Text patičky"
+
+#: includes/Hamilton_Child_Customizer.php:89
+msgid ""
+"Set your custom footer text. You can use also simple <abbr title=\"Hyper "
+"Text Markup Language\">HTML</abbr>."
+msgstr ""
+"Nastavte text patičky vaší stránky. Můžete použít i jednoduché <abbr title="
+"\"Hyper Text Markup Language\">HTML</abbr> značení."
+
+#~ msgid ""
+#~ "&copy; 2017 <a href=\"mailto:ondrej.donek@gmail.com\">Ondřej Doněk</a>."
+#~ "<br>Theme by <a href=\"http://www.andersnoren.se\" target=\"_BLANK"
+#~ "\">Anders Norén</a>"
+#~ msgstr ""
+#~ "&copy; 2017<a href=\"mailto:ondrej.donek@gmail.com\">Ondřej Doněk</a>."
+#~ "<br>Téma vzhledu bylo odvozeno od tématu <strong>Hamilton</strong> od <a "
+#~ "href=\"http://www.andersnoren.se\" target=\"_BLANK\">Anders Norén</a>."
+
+#~ msgid "Set your custom footer text."
+#~ msgstr "Zadejte váš vlastní text patičky."

@@ -32,4 +32,11 @@
 			}
 		} );
 	} );
+
+	// Footer text
+	wp.customize( 'hamilton_child_footer_text', function( value ) {
+		value.bind( function( newval ) {
+			$( '#hamilton_child_footer_text' ).html( newval );
+		} );
+	} );
 } )( jQuery );
