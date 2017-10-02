@@ -28,4 +28,4 @@ Here is screenshot that came from my local development version:
 [5]:https://github.com/ondrejd/od-downloads-plugin
 [6]:http://www.andersnoren.se/
 [7]:https://developer.wordpress.org/themes/customize-api/
-[8]:https://woocommerce.net/
+[8]:https://woocommerce.com/
