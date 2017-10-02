@@ -21,4 +21,15 @@
 			$( 'body, body *, body a' ).css( 'color', newval );
 		} );
 	} );
+
+	// Show site description
+	wp.customize( 'hamilton_child_show_site_description', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.site-description' ).css( 'display', 'block' );
+			} else {
+				$( '.site-description' ).css( 'display', 'none' );
+			}
+		} );
+	} );
 } )( jQuery );

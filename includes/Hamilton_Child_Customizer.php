@@ -26,6 +26,7 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
             $wp_customize->get_setting( 'background_color' )->default = "#750743";
             // ... and add the description to its control.
             $wp_customize->get_control( 'background_color' )->description = __( 'Color for the whole background of the page.', 'hamilton-child' );
+
             // Secondary background color
             $wp_customize->add_setting( 'hamilton_child_bg_sec_color', [
                 'default'    => '#7c005d',
@@ -37,10 +38,9 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'hamilton_child_bg_sec_color', [
                     'label'       => __( 'Secondary background color', 'hamilton-child' ),
                     'section'     => 'colors',
-                    'settings'    => 'hamilton_child_bg_sec_color',
                     'description' => __( 'This color will be used in blog posts listing for background of posts without thumbnail.', 'hamilton-child' ),
                 ]
-            ));
+            ) );
 
             // Foreground color
             $wp_customize->add_setting( 'hamilton_child_fg_color', [
@@ -53,10 +53,23 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'hamilton_child_fg_color', [
                     'label'       => __( 'Foreground color', 'hamilton-child' ),
                     'section'     => 'colors',
-                    'settings'    => 'hamilton_child_fg_color',
                     'description' => __( 'Color which will be used as a main font color.', 'hamilton-child' ),
                 ]
-            ));
+            ) );
+
+            // Show site description
+            $wp_customize->add_setting( 'hamilton_child_show_site_description', [
+                'default'           => false,
+                'capability' 		=> 'edit_theme_options',
+                'sanitize_callback' => [__CLASS__, 'sanitize_checkbox'],
+                'transport'			=> 'postMessage'
+            ] );
+            $wp_customize->add_control( 'hamilton_child_show_site_description', [
+                'type'        => 'checkbox',
+                'section'     => 'hamilton_options',
+                'label'       => __( 'Show site description', 'hamilton-child' ),
+                'description' => __( 'Check if you want to show site description just below the site title.', 'hamilton-child' ),
+            ] );
         }
 
         /**
@@ -91,8 +104,21 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
 body, body *, body a {
     color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>;
 }
+.site-description {
+    display: <?php echo ( get_theme_mod( 'hamilton_child_show_site_description' ) ) ? 'block' : 'none'; ?>;
+}
 </style>
 <?php
+        }
+
+        /**
+         * @internal Sanitizes checkbox values.
+         * @param boolean $checked
+         * @return boolean
+         * @since 1.0.0
+         */
+        public static function sanitize_checkbox( $checked ) {
+            return ( ( isset( $checked ) && true == $checked ) ? true : false );
         }
     }
 endif;

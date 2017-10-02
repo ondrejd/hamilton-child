@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hamilton-child\n"
-"POT-Creation-Date: 2017-10-02 12:47+0200\n"
-"PO-Revision-Date: 2017-10-02 12:47+0200\n"
+"POT-Creation-Date: 2017-10-02 13:34+0200\n"
+"PO-Revision-Date: 2017-10-02 13:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ondřej Doněk <ondrejd@gmail.com>\n"
 "Language: cs_CZ\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Color for the whole background of the page."
 msgstr "Barva pro hlavní pozadí celé stránky."
 
-#: includes/Hamilton_Child_Customizer.php:38
+#: includes/Hamilton_Child_Customizer.php:39
 msgid "Secondary background color"
 msgstr "Dodatečná barva pozadí"
 
@@ -38,6 +38,14 @@ msgstr ""
 msgid "Foreground color"
 msgstr "Barva textu"
 
-#: includes/Hamilton_Child_Customizer.php:57
+#: includes/Hamilton_Child_Customizer.php:56
 msgid "Color which will be used as a main font color."
 msgstr "Barva, která bude použita jako hlavní barva pro text."
+
+#: includes/Hamilton_Child_Customizer.php:70
+msgid "Show site description"
+msgstr "Zobrazit popis webu"
+
+#: includes/Hamilton_Child_Customizer.php:71
+msgid "Check if you want to show site description just below the site title."
+msgstr "Zaškrtněte, pokud pod hlavním názvem chcete zobrazit popis webu."
