@@ -24,7 +24,9 @@ if( ! function_exists( 'hamilton_child_setup' ) ) :
         // Localization
         load_theme_textdomain( 'hamilton-child', get_stylesheet_directory() . '/languages' );
         // Remove Hamilton's secondary menu
-		unregister_nav_menu( 'secondary-menu' );
+        unregister_nav_menu( 'secondary-menu' );
+        // Add WooCommerce support
+        add_theme_support( 'woocommerce' );
     }
 endif;
 // Setup the theme
