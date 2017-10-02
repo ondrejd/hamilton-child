@@ -16,7 +16,7 @@ Here is a list of new features that brings this child theme:
 ## TODO
 Features which was crossed above are also here in _TODO_ list:
 + [WooCommerce][8] integration,
-+ templates for some _CPT_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and _odwpdp_cpt_ from [Downloads Plugin][5]~~.
++ templates for some _CPT_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and _odwpdp_cpt_ from [Downloads Plugin][5].
 
 ## Screenshots
 Here is screenshot that came from my local development version:
