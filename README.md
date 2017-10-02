@@ -4,7 +4,7 @@ Child of __Hamilton theme__ by [Anders Norén][6] used on [ondrejd.com][2] site.
 ## New Features
 Here is a list of new features that brings this child theme:
 + Czech localization
-+ new options in [WordPress Theme Customizer][7],
++ new options in [WordPress Theme Customizer][7] - _Secondary background color_, _Foreground color_ - both in _Colors_ section; _Show site description_ in _Theme options_,
 + ~~[WooCommerce][8] integration~~,
 + ~~templates for some _custom post types_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and _odwpdp_cpt_ from [Downloads Plugin][5]~~.
 
