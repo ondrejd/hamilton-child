@@ -45,7 +45,7 @@ pre.code-snippet .style_127 { color: #657b83; }
 /**
  * Site footer
  */
-#hamilton_child_footer_text { line-height: 1.1em; }
+#hamilton_child_footer_text { line-height: 1.45em; }
 
 /**
  * Post previews (e.g. Blog)
@@ -115,3 +115,24 @@ a, #hamilton_child_footer_text a { transition: all .6s ease-in-out; }
 }
 .icon-github { background-image: url( "assets/img/github.png" ); }
 .icon-linkedin { background-image: url( "assets/img/linkedin.png" ); }
+
+
+
+/**
+ * Different resolutions
+ */
+
+@media ( max-width: 400px ) {
+    .site-header { padding: 35px 0; }
+    .site-footer { padding: 50px 0 35px 0; }
+    .page-header { margin-bottom: 35px; min-height: 150px; }
+    #hamilton_child_footer_text { font-size: 0.8em; }
+    a { transition: none ! important; }
+    .site-title a, .site-title a:hover, .site-title a:visited, .site-title a:active,
+    .alt-nav a, .alt-nav a:hover, .alt-nav a:visited, .alt-nav a:active,
+    #hamilton_child_footer_text a, #hamilton_child_footer_text a:hover,
+    #hamilton_child_footer_text a:visited, #hamilton_child_footer_text a:active {
+        border-bottom-width: 0.20em;
+        padding-bottom: 0.06em;
+    }
+}

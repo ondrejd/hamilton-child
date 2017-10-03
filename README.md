@@ -6,6 +6,7 @@ Here is a list of new features that brings this child theme:
 + Czech localization
 + new options in [WordPress Theme Customizer][7] - _Secondary background color_, _Foreground color_, _Highlight Color_ - all in _Colors_ section; _Show site description_, _Footer text_ in _Theme options_,
 + basic [WooCommerce][8] support,
++ ~~same style for _WP_ login page as for the rest of the site~~,
 + ~~templates for some _custom post types_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and _odwpdp_cpt_ from [Downloads Plugin][5]~~.
 
 ## Installation
@@ -18,8 +19,16 @@ Features which was crossed above are also here in _TODO_ list:
 + templates for some _CPT_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and _odwpdp_cpt_ from [Downloads Plugin][5].
 
 ## Screenshots
-Here is screenshot that came from my local development version:
-[![Front page](screenshot.png)](screenshot.png)
+Here are screenshots that came from my local development version:
+
+### Desktop
+[![Front page on desktop](screenshot.png)](screenshot.png)
+
+### Tablet
+[![Front page on tablet](screenshot-tablet.png)](screenshot-tablet.png)
+
+### Mobile
+[![Front page on mobile](screenshot-mobile.png)](screenshot-mobile.png)
 
 [1]:https://wordpress.org/
 [2]:https://ondrejd.com/
