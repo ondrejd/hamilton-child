@@ -135,18 +135,21 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
         public static function header_output() {
 ?>
 <style type='text/css'>
-.missing-thumbnail .preview-image {
-	background-color: <?php echo get_theme_mod( 'hamilton_child_bg_sec_color' ) ?>;
-}
-body, body *, body a {
-    color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>;
-}
-.site-description {
-    display: <?php echo ( get_theme_mod( 'hamilton_child_show_site_description' ) ) ? 'block' : 'none'; ?>;
-}
-body a:active, body a:hover {
+/* Secondary background color */
+.missing-thumbnail .preview-image { background-color: <?php echo get_theme_mod( 'hamilton_child_bg_sec_color' ) ?>; }
+/* Foreground color */
+body, body *, body a { color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>; }
+/* Site description */
+.site-description { display: <?php echo ( get_theme_mod( 'hamilton_child_show_site_description' ) ) ? 'block' : 'none'; ?>; }
+/* Highlight color */
+.site-name, .site-title a, .alt-nav a { color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>; }
+.site-title a:active, .site-title a:hover,
+.alt-nav a:active, .alt-nav a:hover,
+#hamilton_child_footer_text a:active, #hamilton_child_footer_text a:hover {
     border-bottom: 0.25em solid <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>;
 }
+.dark-mode .entry-content a { border-bottom-color: <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>; }
+.dark-mode .entry-content a:hover { color: <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>; }
 </style>
 <?php
         }
