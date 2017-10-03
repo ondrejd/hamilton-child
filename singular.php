@@ -24,19 +24,18 @@ if ( have_posts() )  :
 				<div>
 
 					<?php
-					the_title( '<h1 class="title">', '</h2>' );
+					the_title( '<h2 class="title">', '</h2>' );
 
 					// Make sure we have a custom excerpt
-					if ( has_excerpt() ) the_excerpt();
+					if ( has_excerpt() && ! is_front_page() ) the_excerpt();
 
 					// Only output post meta data on single
 					if ( is_front_page() ) : ?>
-					<div class="meta user-meta">
-						<strong>LinkedIn</strong>:
-						<a href="https://linkedin.com/in/ondrejd/" target="_blank">linkedin.com/in/ondrejd</a>
-						<strong><img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/github.png' ?>" alt="GitHub" style="width:28px;height:28px;display:inline-block;position:relative;top:7px;"></strong>
-						<a href="https://github.com/ondrejd/" target="_blank">github.com/ondrejd</a>
-					</div>
+					<div class="meta user-meta"><?php wp_nav_menu( array(
+					    'menu_class'     => 'fp-main-social-menu',
+					    'container'      => '',
+					    'theme_location' => 'social-menu'
+					) ); ?></div>
 					<?php elseif ( is_single() ) : ?>
 
 						<div class="meta">

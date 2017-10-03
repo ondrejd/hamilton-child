@@ -22,6 +22,13 @@
 		} );
 	} );
 
+	// Highlight color
+	wp.customize( 'hamilton_child_hg_color', function( value ) {
+		value.bind( function( newval ) {
+			$( 'body a:active, body a:hover' ).css( 'border-bottom', '0.25em solid ' + newval );
+		} );
+	} );
+
 	// Show site description
 	wp.customize( 'hamilton_child_show_site_description', function( value ) {
 		value.bind( function( newval ) {

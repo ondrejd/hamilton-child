@@ -19,6 +19,7 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
     class Hamilton_Child_Customizer {
         /**
          * Registers our customizations.
+         * @link https://developer.wordpress.org/themes/customize-api/customizer-objects/
          * @param WP_Customize_Manager $wp_customize
          * @return void
          * @since 1.0.0
@@ -33,9 +34,10 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
 
             // Secondary background color
             $wp_customize->add_setting( 'hamilton_child_bg_sec_color', [
-                'default'    => '#7c005d',
-                'transport'	 => 'postMessage',
-                'capability' => 'edit_theme_options',
+                'capability'        => 'edit_theme_options',
+                'default'           => '#ffffff',
+                'sanitize_callback' => 'sanitize_hex_color',
+                'transport'         => 'postMessage',
             ] );
             $wp_customize->add_control( new WP_Customize_Color_Control(
                 $wp_customize,
@@ -48,9 +50,10 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
 
             // Foreground color
             $wp_customize->add_setting( 'hamilton_child_fg_color', [
-                'default'    => '#ffffff',
-                'transport'	 => 'postMessage',
-                'capability' => 'edit_theme_options',
+                'capability'        => 'edit_theme_options',
+                'default'           => '#ffffff',
+                'sanitize_callback' => 'sanitize_hex_color',
+                'transport'         => 'postMessage',
             ] );
             $wp_customize->add_control( new WP_Customize_Color_Control(
                 $wp_customize,
@@ -61,12 +64,28 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 ]
             ) );
 
+            // Highlight color
+            $wp_customize->add_setting( 'hamilton_child_hg_color', [
+                'capability'        => 'edit_theme_options',
+                'default'           => '#e77243',
+                'sanitize_callback' => 'sanitize_hex_color',
+                'transport'         => 'postMessage',
+            ] );
+            $wp_customize->add_control( new WP_Customize_Color_Control(
+                $wp_customize,
+                'hamilton_child_hg_color', [
+                    'label'       => __( 'Highlight color', 'hamilton-child' ),
+                    'section'     => 'colors',
+                    'description' => __( 'Color which will be used for highlighting certain texts (anchorts etc).', 'hamilton-child' ),
+                ]
+            ) );
+
             // Show site description
             $wp_customize->add_setting( 'hamilton_child_show_site_description', [
-                'default'           => false,
                 'capability' 		=> 'edit_theme_options',
+                'default'           => false,
                 'sanitize_callback' => [__CLASS__, 'sanitize_checkbox'],
-                'transport'			=> 'postMessage'
+                'transport'         => 'postMessage'
             ] );
             $wp_customize->add_control( 'hamilton_child_show_site_description', [
                 'type'        => 'checkbox',
@@ -79,7 +98,6 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
             $wp_customize->add_setting( 'hamilton_child_footer_text', [
                 'default'           => __( '&copy; 2017 <a href="mailto:ondrej.donek@gmail.com">Ondřej Doněk</a>.<br>Theme derrived from <strong>Hamilton</strong> theme by <a href="http://www.andersnoren.se" target="_BLANK">Anders Norén</a>.', 'hamilton-child' ),
                 'capability' 		=> 'edit_theme_options',
-                //'sanitize_callback' => 'sanitize_textarea_field',
                 'transport'			=> 'postMessage'
             ] );
             $wp_customize->add_control( 'hamilton_child_footer_text', [
@@ -125,6 +143,9 @@ body, body *, body a {
 }
 .site-description {
     display: <?php echo ( get_theme_mod( 'hamilton_child_show_site_description' ) ) ? 'block' : 'none'; ?>;
+}
+body a:active, body a:hover {
+    border-bottom: 0.25em solid <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>;
 }
 </style>
 <?php
