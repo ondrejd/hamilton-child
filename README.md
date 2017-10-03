@@ -4,10 +4,13 @@ Child of __Hamilton theme__ by [Anders Norén][6] used on [ondrejd.com][2] site.
 ## New Features
 Here is a list of new features that brings this child theme:
 + Czech localization
-+ new options in [WordPress Theme Customizer][7] - _Secondary background color_, _Foreground color_, _Highlight Color_ - all in _Colors_ section; _Show site description_, _Footer text_ in _Theme options_,
++ new options in [WordPress Theme Customizer][7]:
+ - section __Colors__ - new options _Secondary background color_, _Foreground color_, _Highlight Color_,
+ - section __Theme options__ - new options _Show site description_, _Footer text_,
+ - section __Blog Page Display__ - with options _Show blog filter_, _Show Category_, _Show Date and Time_, _Show Excerpt_ and _Show Tags_,
 + basic [WooCommerce][8] support,
 + ~~same style for _WP_ login page as for the rest of the site~~,
-+ ~~templates for some _custom post types_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and _odwpdp_cpt_ from [Downloads Plugin][5]~~.
++ ~~templates for some _custom post types_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and *odwpdp_cpt* from [Downloads Plugin][5]~~.
 
 ## Installation
 + unpack archive with theme into your `/wp-content/themes` directory,
@@ -17,8 +20,7 @@ Here is a list of new features that brings this child theme:
 ## TODO
 Features which was crossed above are also here in _TODO_ list:
 + same style for ___WP_ login page__ as for the rest of the site
-+ templates for some _CPT_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and _odwpdp_cpt_ from [Downloads Plugin][5],
-+ change blog template like this: ![Blog - TODO](screenshot-todo.png)
++ templates for some _custom post types_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and *odwpdp_cpt* from [Downloads Plugin][5].
 
 ## Screenshots
 Here are screenshots that came from my local development version:

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hamilton-child\n"
-"POT-Creation-Date: 2017-10-03 10:16+0200\n"
-"PO-Revision-Date: 2017-10-03 10:17+0200\n"
+"POT-Creation-Date: 2017-10-03 19:59+0200\n"
+"PO-Revision-Date: 2017-10-03 20:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ondřej Doněk <ondrejd@gmail.com>\n"
 "Language: cs_CZ\n"
@@ -14,23 +14,50 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SearchPath-0: functions.php\n"
-"X-Poedit-SearchPath-1: includes\n"
-"X-Poedit-SearchPath-2: templates\n"
+"X-Poedit-SearchPath-0: includes\n"
+"X-Poedit-SearchPath-1: templates\n"
+"X-Poedit-SearchPath-2: content.php\n"
+"X-Poedit-SearchPath-3: footer.php\n"
+"X-Poedit-SearchPath-4: functions.php\n"
+"X-Poedit-SearchPath-5: header.php\n"
+"X-Poedit-SearchPath-6: index.php\n"
+"X-Poedit-SearchPath-7: singular.php\n"
+"X-Poedit-SearchPath-8: woocommerce.php\n"
+
+#: content.php:37
+msgid "Sticky"
+msgstr "Přilepený"
+
+#: content.php:51
+msgid "Tags"
+msgstr "Štítky"
+
+#: content.php:67
+msgid "Date and time"
+msgstr "Datum a čas"
+
+#: content.php:67
+#, php-format
+msgid "%s at %s"
+msgstr "%s v %s"
 
 #: functions.php:27
 msgid "Social menu"
 msgstr "Nabídka pro sociální sítě"
 
-#: includes/Hamilton_Child_Customizer.php:33
+#: header.php:125
+msgid "Theme by"
+msgstr "Téma vzhledu od"
+
+#: includes/Hamilton_Child_Customizer.php:48
 msgid "Color for the whole background of the page."
 msgstr "Barva pro hlavní pozadí celé stránky."
 
-#: includes/Hamilton_Child_Customizer.php:45
+#: includes/Hamilton_Child_Customizer.php:59
 msgid "Secondary background color"
 msgstr "Dodatečná barva pozadí"
 
-#: includes/Hamilton_Child_Customizer.php:47
+#: includes/Hamilton_Child_Customizer.php:61
 msgid ""
 "This color will be used in blog posts listing for background of posts "
 "without thumbnail."
@@ -38,31 +65,31 @@ msgstr ""
 "Tato barva je použita například jako pozadí pro jednotlivé příspěvky, které "
 "nemají připojený obrázek, v jejich výpisu."
 
-#: includes/Hamilton_Child_Customizer.php:61
+#: includes/Hamilton_Child_Customizer.php:74
 msgid "Foreground color"
 msgstr "Barva textu"
 
-#: includes/Hamilton_Child_Customizer.php:63
+#: includes/Hamilton_Child_Customizer.php:76
 msgid "Color which will be used as a main font color."
 msgstr "Barva, která bude použita jako hlavní barva pro text."
 
-#: includes/Hamilton_Child_Customizer.php:77
+#: includes/Hamilton_Child_Customizer.php:89
 msgid "Highlight color"
 msgstr "Barva zvýraznění"
 
-#: includes/Hamilton_Child_Customizer.php:79
+#: includes/Hamilton_Child_Customizer.php:91
 msgid "Color which will be used for highlighting certain texts (anchorts etc)."
 msgstr "Barva, která bude použita ke zvýraznění určitých textů (např. odkazy)."
 
-#: includes/Hamilton_Child_Customizer.php:93
+#: includes/Hamilton_Child_Customizer.php:113
 msgid "Show site description"
 msgstr "Zobrazit popis webu"
 
-#: includes/Hamilton_Child_Customizer.php:94
+#: includes/Hamilton_Child_Customizer.php:114
 msgid "Check if you want to show site description just below the site title."
 msgstr "Zaškrtněte, pokud pod hlavním názvem chcete zobrazit popis webu."
 
-#: includes/Hamilton_Child_Customizer.php:99
+#: includes/Hamilton_Child_Customizer.php:119
 msgid ""
 "&copy; 2017 <a href=\"mailto:ondrej.donek@gmail.com\">Ondřej Doněk</a>."
 "<br>Theme derrived from <strong>Hamilton</strong> theme by <a href=\"http://"
@@ -72,17 +99,115 @@ msgstr ""
 "<br>Téma vzhledu bylo odvozeno od tématu <strong>Hamilton</strong> od <a "
 "href=\"http://www.andersnoren.se\" target=\"_BLANK\">Anders Norén</a>."
 
-#: includes/Hamilton_Child_Customizer.php:106
+#: includes/Hamilton_Child_Customizer.php:126
 msgid "Footer text"
 msgstr "Text patičky"
 
-#: includes/Hamilton_Child_Customizer.php:107
+#: includes/Hamilton_Child_Customizer.php:127
 msgid ""
 "Set your custom footer text. You can use also simple <abbr title=\"Hyper "
 "Text Markup Language\">HTML</abbr>."
 msgstr ""
 "Nastavte text patičky vaší stránky. Můžete použít i jednoduché <abbr title="
 "\"Hyper Text Markup Language\">HTML</abbr> značení."
+
+#: includes/Hamilton_Child_Customizer.php:141
+msgid "Blog Page Display"
+msgstr "Zobrazení stránky Blogu"
+
+#: includes/Hamilton_Child_Customizer.php:144
+msgid "Settings for how to display the <strong>Blog Page</strong>."
+msgstr "Nastavení pro zobrazení <strong>Stránky Blogu</strong>."
+
+#: includes/Hamilton_Child_Customizer.php:161
+msgid "Show category"
+msgstr "Zobrazit rubriky"
+
+#: includes/Hamilton_Child_Customizer.php:162
+msgid "Check to show post categories inside the posts previews."
+msgstr "Zaškrtněte,  pokud chcete zobrazit rubriky uvnitř ukázek příspěvků."
+
+#: includes/Hamilton_Child_Customizer.php:175
+msgid "Show date"
+msgstr "Zobrazit datum a čas"
+
+#: includes/Hamilton_Child_Customizer.php:176
+msgid "Check to show date and time in posts previews."
+msgstr ""
+"Zaškrtněte,  pokud chcete zobrazit datum a čas uvnitř ukázek příspěvků."
+
+#: includes/Hamilton_Child_Customizer.php:189
+msgid "Show excerpt"
+msgstr "Zobrazit výňatek"
+
+#: includes/Hamilton_Child_Customizer.php:190
+msgid "Check to show post excerpt inside the posts previews."
+msgstr "Zaškrtněte,  pokud chcete zobrazit výňatek uvnitř ukázek příspěvků."
+
+#: includes/Hamilton_Child_Customizer.php:203
+msgid "Show tags"
+msgstr "Zobrazit tagy"
+
+#: includes/Hamilton_Child_Customizer.php:204
+msgid "Check to show tags inside the posts previews."
+msgstr "Zaškrtněte,  pokud chcete zobrazit štítky uvnitř ukázek příspěvků."
+
+#: includes/Hamilton_Child_Customizer.php:217
+msgid "Show blog filter"
+msgstr "Zobrazit filtr"
+
+#: includes/Hamilton_Child_Customizer.php:218
+msgid ""
+"Check to show filter on <strong>Blog Page</strong> above the grid with posts."
+msgstr ""
+"Zaškrtněte, pokud chcete zobrazit filtr na <strong>Stránce Blogu</strong> "
+"přímo nad mřížkou s příspěvky."
+
+#: index.php:40
+#, php-format
+msgid "Search: %s"
+msgstr "Vyhledat %s"
+
+#: index.php:41
+#, php-format
+msgid "We found %s results matching your search."
+msgstr "Bylo nalezeno %s případů, které odpovídají vašemu vyhledávání."
+
+#: index.php:51
+msgid "No results found"
+msgstr "Žádné výsledky"
+
+#: index.php:52
+#, php-format
+msgid "We could not find any results for the search query \"%s\"."
+msgstr "Nebyly nalezeny žádné výsledky při vyhledávání řetězce \"%s\"."
+
+#: singular.php:44
+msgid "In"
+msgstr "V"
+
+#: singular.php:49
+msgid "Add Comment"
+msgstr "Přidat komentář"
+
+#: singular.php:50
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: singular.php:51
+#, php-format
+msgid "%s Comments"
+msgstr "%s komentářů"
+
+#: singular.php:81
+msgid "Pages:"
+msgstr "Stránky:"
+
+#~ msgid "Categories:"
+#~ msgstr "Kategorie:"
+
+#~ msgid "Categories: "
+#~ msgstr "Kategorie:"
 
 #~ msgid "Color which will be used as a highlight font color."
 #~ msgstr ""

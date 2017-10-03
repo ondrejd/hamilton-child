@@ -46,4 +46,59 @@
 			$( '#hamilton_child_footer_text' ).html( newval );
 		} );
 	} );
+
+	// Preview Content: Category
+	wp.customize( 'hamilton_child_preview_show_category', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.preview-header .preview-category' ).css( 'display', 'block' );
+			} else {
+				$( '.preview-header .preview-category' ).css( 'display', 'none' );
+			}
+		} );
+	} );
+
+	// Preview Content: Date and Time
+	wp.customize( 'hamilton_child_preview_show_date', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.preview-header .preview-date' ).css( 'display', 'block' );
+			} else {
+				$( '.preview-header .preview-date' ).css( 'display', 'none' );
+			}
+		} );
+	} );
+
+	// Preview Content: Excerpt
+	wp.customize( 'hamilton_child_preview_show_excerpt', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.preview-header .preview-excerpt' ).css( 'display', 'block' );
+			} else {
+				$( '.preview-header .preview-excerpt' ).css( 'display', 'none' );
+			}
+		} );
+	} );
+
+	// Preview Content: Tags
+	wp.customize( 'hamilton_child_preview_show_tags', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.preview-header .preview-tags' ).css( 'display', 'block' );
+			} else {
+				$( '.preview-header .preview-tags' ).css( 'display', 'none' );
+			}
+		} );
+	} );
+
+	// Show blog filter
+	wp.customize( 'hamilton_child_blog_filter', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '#hamilton_child_blog_filter' ).css( 'display', 'block' );
+			} else {
+				$( '#hamilton_child_blog_filter' ).css( 'display', 'none' );
+			}
+		} );
+	} );
 } )( jQuery );

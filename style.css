@@ -58,7 +58,52 @@ pre.code-snippet .style_127 { color: #657b83; }
 .post-preview {}
 .post-preview.spotted {}
 .preview-image {}
-.preview-header {}
+.preview-header { margin: 0; }
+.preview-header h2 {
+    padding: 25px 0;
+    text-align: left;
+}
+.preview-header .preview-excerpt {}
+.preview-header .preview-excerpt p {
+    font-size: 0.9em;
+    font-weight: 200;
+    text-align: left;
+}
+.preview-header .preview-category {
+    bottom: 20px;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 200;
+    left: 0;
+    position: absolute;
+    text-align: left
+}
+.preview-header .preview-tags {
+    bottom: 0;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 200;
+    left: 0;
+    position: absolute;
+    text-align: left;
+}
+.preview-header .preview-tags .preview-tag {}
+.preview-header .preview-tags .preview-tag::before { content: "| "; }
+.preview-header .preview-tags .preview-tag:first-child::before { content: ""; }
+.preview-header .preview-date {
+    font-size: 0.65em;
+    font-weight: 200;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.preview-header .preview-category .dashicons,
+.preview-header .preview-tags .dashicons,
+.preview-header .preview-date .dashicons {
+    position: relative;
+    top: -0.15em;
+    left: -0.05em;
+}
 
 /**
  * Customize anchors in header
@@ -116,12 +161,30 @@ a, #hamilton_child_footer_text a { transition: all .6s ease-in-out; }
 .icon-github { background-image: url( "assets/img/github.png" ); }
 .icon-linkedin { background-image: url( "assets/img/linkedin.png" ); }
 
-
+/**
+ * Filtry nad vypisem prispevku
+ */
+.posts-filters {
+    font-size: 0.8em;
+    font-weight: 200;
+    height: 2em;
+    padding: 0.25em 0;
+}
+.posts-filters .posts-filter-title {
+    font-weight: 400;
+}
+.posts-filters .post-categories {
+    display: inline-block;
+}
+.posts-filters .post-categories li {
+    display: inline-block;
+}
+.posts-filters .post-categories li a {}
+.posts-views {}
 
 /**
  * Different resolutions
  */
-
 @media ( max-width: 400px ) {
     .site-header { padding: 35px 0; }
     .site-footer { padding: 50px 0 35px 0; }
