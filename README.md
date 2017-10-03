@@ -16,7 +16,9 @@ Here is a list of new features that brings this child theme:
 
 ## TODO
 Features which was crossed above are also here in _TODO_ list:
-+ templates for some _CPT_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and _odwpdp_cpt_ from [Downloads Plugin][5].
++ same style for ___WP_ login page__ as for the rest of the site
++ templates for some _CPT_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and _odwpdp_cpt_ from [Downloads Plugin][5],
++ change blog template like this: ![Blog - TODO](screenshot-todo.png)
 
 ## Screenshots
 Here are screenshots that came from my local development version:
