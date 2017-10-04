@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hamilton-child\n"
-"POT-Creation-Date: 2017-10-03 19:59+0200\n"
-"PO-Revision-Date: 2017-10-03 20:00+0200\n"
+"POT-Creation-Date: 2017-10-04 09:11+0200\n"
+"PO-Revision-Date: 2017-10-04 09:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ondřej Doněk <ondrejd@gmail.com>\n"
 "Language: cs_CZ\n"
@@ -49,15 +49,15 @@ msgstr "Nabídka pro sociální sítě"
 msgid "Theme by"
 msgstr "Téma vzhledu od"
 
-#: includes/Hamilton_Child_Customizer.php:48
+#: includes/Hamilton_Child_Customizer.php:63
 msgid "Color for the whole background of the page."
 msgstr "Barva pro hlavní pozadí celé stránky."
 
-#: includes/Hamilton_Child_Customizer.php:59
+#: includes/Hamilton_Child_Customizer.php:74
 msgid "Secondary background color"
 msgstr "Dodatečná barva pozadí"
 
-#: includes/Hamilton_Child_Customizer.php:61
+#: includes/Hamilton_Child_Customizer.php:76
 msgid ""
 "This color will be used in blog posts listing for background of posts "
 "without thumbnail."
@@ -65,31 +65,31 @@ msgstr ""
 "Tato barva je použita například jako pozadí pro jednotlivé příspěvky, které "
 "nemají připojený obrázek, v jejich výpisu."
 
-#: includes/Hamilton_Child_Customizer.php:74
+#: includes/Hamilton_Child_Customizer.php:89
 msgid "Foreground color"
 msgstr "Barva textu"
 
-#: includes/Hamilton_Child_Customizer.php:76
+#: includes/Hamilton_Child_Customizer.php:91
 msgid "Color which will be used as a main font color."
 msgstr "Barva, která bude použita jako hlavní barva pro text."
 
-#: includes/Hamilton_Child_Customizer.php:89
+#: includes/Hamilton_Child_Customizer.php:104
 msgid "Highlight color"
 msgstr "Barva zvýraznění"
 
-#: includes/Hamilton_Child_Customizer.php:91
+#: includes/Hamilton_Child_Customizer.php:106
 msgid "Color which will be used for highlighting certain texts (anchorts etc)."
 msgstr "Barva, která bude použita ke zvýraznění určitých textů (např. odkazy)."
 
-#: includes/Hamilton_Child_Customizer.php:113
+#: includes/Hamilton_Child_Customizer.php:132
 msgid "Show site description"
 msgstr "Zobrazit popis webu"
 
-#: includes/Hamilton_Child_Customizer.php:114
+#: includes/Hamilton_Child_Customizer.php:133
 msgid "Check if you want to show site description just below the site title."
 msgstr "Zaškrtněte, pokud pod hlavním názvem chcete zobrazit popis webu."
 
-#: includes/Hamilton_Child_Customizer.php:119
+#: includes/Hamilton_Child_Customizer.php:139
 msgid ""
 "&copy; 2017 <a href=\"mailto:ondrej.donek@gmail.com\">Ondřej Doněk</a>."
 "<br>Theme derrived from <strong>Hamilton</strong> theme by <a href=\"http://"
@@ -99,11 +99,11 @@ msgstr ""
 "<br>Téma vzhledu bylo odvozeno od tématu <strong>Hamilton</strong> od <a "
 "href=\"http://www.andersnoren.se\" target=\"_BLANK\">Anders Norén</a>."
 
-#: includes/Hamilton_Child_Customizer.php:126
+#: includes/Hamilton_Child_Customizer.php:146
 msgid "Footer text"
 msgstr "Text patičky"
 
-#: includes/Hamilton_Child_Customizer.php:127
+#: includes/Hamilton_Child_Customizer.php:147
 msgid ""
 "Set your custom footer text. You can use also simple <abbr title=\"Hyper "
 "Text Markup Language\">HTML</abbr>."
@@ -111,57 +111,197 @@ msgstr ""
 "Nastavte text patičky vaší stránky. Můžete použít i jednoduché <abbr title="
 "\"Hyper Text Markup Language\">HTML</abbr> značení."
 
-#: includes/Hamilton_Child_Customizer.php:141
+#: includes/Hamilton_Child_Customizer.php:161
 msgid "Blog Page Display"
-msgstr "Zobrazení stránky Blogu"
+msgstr "Zobrazení stránky blogu"
 
-#: includes/Hamilton_Child_Customizer.php:144
+#: includes/Hamilton_Child_Customizer.php:164
 msgid "Settings for how to display the <strong>Blog Page</strong>."
 msgstr "Nastavení pro zobrazení <strong>Stránky Blogu</strong>."
 
-#: includes/Hamilton_Child_Customizer.php:161
+#: includes/Hamilton_Child_Customizer.php:182
 msgid "Show category"
 msgstr "Zobrazit rubriky"
 
-#: includes/Hamilton_Child_Customizer.php:162
+#: includes/Hamilton_Child_Customizer.php:183
 msgid "Check to show post categories inside the posts previews."
 msgstr "Zaškrtněte,  pokud chcete zobrazit rubriky uvnitř ukázek příspěvků."
 
-#: includes/Hamilton_Child_Customizer.php:175
+#: includes/Hamilton_Child_Customizer.php:196
 msgid "Show date"
 msgstr "Zobrazit datum a čas"
 
-#: includes/Hamilton_Child_Customizer.php:176
+#: includes/Hamilton_Child_Customizer.php:197
 msgid "Check to show date and time in posts previews."
 msgstr ""
 "Zaškrtněte,  pokud chcete zobrazit datum a čas uvnitř ukázek příspěvků."
 
-#: includes/Hamilton_Child_Customizer.php:189
+#: includes/Hamilton_Child_Customizer.php:210
 msgid "Show excerpt"
 msgstr "Zobrazit výňatek"
 
-#: includes/Hamilton_Child_Customizer.php:190
+#: includes/Hamilton_Child_Customizer.php:211
 msgid "Check to show post excerpt inside the posts previews."
 msgstr "Zaškrtněte,  pokud chcete zobrazit výňatek uvnitř ukázek příspěvků."
 
-#: includes/Hamilton_Child_Customizer.php:203
+#: includes/Hamilton_Child_Customizer.php:224
 msgid "Show tags"
 msgstr "Zobrazit tagy"
 
-#: includes/Hamilton_Child_Customizer.php:204
+#: includes/Hamilton_Child_Customizer.php:225
 msgid "Check to show tags inside the posts previews."
 msgstr "Zaškrtněte,  pokud chcete zobrazit štítky uvnitř ukázek příspěvků."
 
-#: includes/Hamilton_Child_Customizer.php:217
+#: includes/Hamilton_Child_Customizer.php:238
 msgid "Show blog filter"
 msgstr "Zobrazit filtr"
 
-#: includes/Hamilton_Child_Customizer.php:218
+#: includes/Hamilton_Child_Customizer.php:239
 msgid ""
 "Check to show filter on <strong>Blog Page</strong> above the grid with posts."
 msgstr ""
 "Zaškrtněte, pokud chcete zobrazit filtr na <strong>Stránce Blogu</strong> "
 "přímo nad mřížkou s příspěvky."
+
+#: includes/Hamilton_Child_Customizer.php:252
+msgid "Login Page Display"
+msgstr "Zobrazení přihlašovací stránky"
+
+#: includes/Hamilton_Child_Customizer.php:255
+msgid ""
+"Settings for how to display the <strong>Login Page</strong> (show <a href=\"#"
+"\" class=\"wp-login-page-link\">Login Page</a>)."
+msgstr ""
+"Nastavení, zobrazit stránku <strong>Přihlášení</strong> (zobrazit stránku <a "
+"href=\"#\" class=\"wp-login-page-link\">Přihlášení</a>)."
+
+#: includes/Hamilton_Child_Customizer.php:271
+msgid "Show logo"
+msgstr "Zobrazit logo"
+
+#: includes/Hamilton_Child_Customizer.php:272
+msgid ""
+"Check to show <strong>WordPress</strong> or custom logo above the login form."
+msgstr ""
+"Zaškrtněte, pokud chcete nad přihlašovacím formulářem zobrazit logo (ať už "
+"<strong>WordPress</strong> nebo jiné)."
+
+#: includes/Hamilton_Child_Customizer.php:301
+msgid "Shop Page Display"
+msgstr "Zobrazení stránky obchodu"
+
+#: includes/Hamilton_Child_Customizer.php:304
+msgid ""
+"Settings for how to display <strong>WooCommerce</strong> <em>Shop</em> page."
+msgstr "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku obchodu."
+
+#: includes/Hamilton_Child_Customizer.php:324
+msgid "Show pages title"
+msgstr "Zobrazit názvy stránek"
+
+#: includes/Hamilton_Child_Customizer.php:325
+msgid ""
+"Check to show titles on <strong>WooCommerce</strong> pages like <em>Shop</"
+"em>, <em>Cart</em> or <em>Checkout</em>."
+msgstr ""
+"Nastavení, jak zobrazit <strong>WooCommerce</strong> stránky, jako např. "
+"obchodu, košíku atp."
+
+#: includes/Hamilton_Child_Customizer.php:338
+msgid "Fancy order select"
+msgstr "Lepší výběr řazení"
+
+#: includes/Hamilton_Child_Customizer.php:339
+msgid ""
+"Check to show fancy order select on <em>Shop</em> page instead of the "
+"default one (plain <em>select</em> input)."
+msgstr ""
+"Zaškrtněte, pokud chcete zobrazovat hezčí výběr řazení namísto stávajícího "
+"(čistý <em>select</em> HTML element)."
+
+#: includes/Hamilton_Child_Customizer.php:352
+msgid "One-page shop"
+msgstr "Jedno-stránkový obchod"
+
+#: includes/Hamilton_Child_Customizer.php:353
+msgid ""
+"Check to turn your <em>Shop</em> page with pagination into one page with all "
+"your products (<strong>requires One-Page Shop Plugin</strong>)."
+msgstr ""
+"Zaškrtněte, pokud chcete váš obchod s klasickým stránkováním proměnit v "
+"moderní jedno stránkový obchod (<strong>vyžaduje One-Page Shop Plugin</"
+"strong>)."
+
+#: includes/Hamilton_Child_Customizer.php:367
+msgid "Cart Page Display"
+msgstr "Zobrazení stránky košíku"
+
+#: includes/Hamilton_Child_Customizer.php:370
+msgid ""
+"Settings for how to display <strong>WooCommerce</strong> <em>Cart</em> page."
+msgstr "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku košíku."
+
+#: includes/Hamilton_Child_Customizer.php:390
+#: includes/Hamilton_Child_Customizer.php:428
+msgid "Show coupon"
+msgstr "Zobrazit kupón"
+
+#: includes/Hamilton_Child_Customizer.php:391
+#: includes/Hamilton_Child_Customizer.php:429
+msgid ""
+"Check to show coupon field on <strong>Cart Page</strong> below the list of "
+"purchased items."
+msgstr ""
+"Zaškrtněte, pokud chcete na stránce <strong>Košík</strong> zobrazit pole pro "
+"kupón pod seznamem s pořízenými položkami."
+
+#: includes/Hamilton_Child_Customizer.php:404
+msgid "Checkout Page Display"
+msgstr "Zobrazení stránky objednávky"
+
+#: includes/Hamilton_Child_Customizer.php:407
+msgid ""
+"Settings for how to display <strong>WooCommerce</strong> <em>Checkout</em> "
+"page."
+msgstr ""
+"Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku objednávky."
+
+#: includes/Hamilton_Child_Customizer.php:442
+msgid "Shipping choice"
+msgstr "Volba dopravy"
+
+#: includes/Hamilton_Child_Customizer.php:443
+msgid ""
+"Check to show shipping choice form on <strong>Checkout Page</strong> as "
+"before on <strong>Cart Page</strong> page."
+msgstr ""
+"Zaškrtněte, pokud chcete na stránce <strong>Objednávka</strong> zobrazit "
+"volby dopravy stejně jako předtím na stránce <strong>Košík</strong>."
+
+#: includes/Hamilton_Child_Customizer.php:456
+msgid "Account Page Display"
+msgstr "Zobrazení stránky Můj účet"
+
+#: includes/Hamilton_Child_Customizer.php:459
+msgid ""
+"Settings for how to display <strong>WooCommerce</strong> <em>Account</em> "
+"page."
+msgstr ""
+"Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku <em>Můj účet</"
+"em>."
+
+#: includes/Hamilton_Child_Customizer.php:479
+msgid "Hide Dashboard"
+msgstr "Skrýt nástěnku"
+
+#: includes/Hamilton_Child_Customizer.php:480
+msgid ""
+"Check to hide <strong>Dashboard</strong> on <strong>Account Page</strong> so "
+"the first pane become <strong>Orders</strong>."
+msgstr ""
+"Zaškrtněte, pokud chcete na stránce <em>Můj účet</em> schovat panel "
+"<strong>Nástěnka</strong>, takže by se prvním stal panel <strong>Objednávky</"
+"strong>."
 
 #: index.php:40
 #, php-format
@@ -202,6 +342,38 @@ msgstr "%s komentářů"
 #: singular.php:81
 msgid "Pages:"
 msgstr "Stránky:"
+
+#~ msgid ""
+#~ "Settings for how to display the <strong>Login Page</strong> &ndash; "
+#~ "because its nature you need to click <a href=\"#\" class=\"wp-login-page-"
+#~ "link\">on this link</a> in order to see changes on a login page."
+#~ msgstr ""
+#~ "Nastavení, zobrazit stránku <strong>Přihlášení</strong> (zobrazit stránku "
+#~ "<a href=\"#\" class=\"wp-login-page-link\">Přihlášení</a>)."
+
+#~ msgid "Show shipping choice"
+#~ msgstr "Volba dopravy"
+
+#~ msgid ""
+#~ "Check to hide <strong>Dashboard</strong> on <strong>Account Page</strong> "
+#~ "so the first pane become <em>Orders</em>."
+#~ msgstr ""
+#~ "Zaškrtněte, pokud chcete na stránce <em>Můj účet</em> schovat panel "
+#~ "<strong>Nástěnka</strong>, takže by se prvním stal panel "
+#~ "<strong>Objednávky</strong>."
+
+#~ msgid ""
+#~ "Check to hide <em>Dashboard</em> on <strong>Account Page</strong> so the "
+#~ "first pane become <em>Orders</em>."
+#~ msgstr ""
+#~ "Zaškrtněte, pokud chcete na stránce <em>Můj účet</em> schovat panel "
+#~ "<strong>Nástěnka</strong>."
+
+#~ msgid "WooCommerce Options"
+#~ msgstr "Možnosti pro WooCommerce"
+
+#~ msgid "Use fancy order select"
+#~ msgstr "Lepší výběr řazení"
 
 #~ msgid "Categories:"
 #~ msgstr "Kategorie:"
