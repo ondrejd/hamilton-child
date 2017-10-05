@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hamilton-child\n"
-"POT-Creation-Date: 2017-10-04 09:11+0200\n"
-"PO-Revision-Date: 2017-10-04 09:12+0200\n"
+"POT-Creation-Date: 2017-10-05 11:00+0200\n"
+"PO-Revision-Date: 2017-10-05 11:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ondřej Doněk <ondrejd@gmail.com>\n"
 "Language: cs_CZ\n"
@@ -14,15 +14,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SearchPath-0: includes\n"
-"X-Poedit-SearchPath-1: templates\n"
-"X-Poedit-SearchPath-2: content.php\n"
-"X-Poedit-SearchPath-3: footer.php\n"
-"X-Poedit-SearchPath-4: functions.php\n"
-"X-Poedit-SearchPath-5: header.php\n"
-"X-Poedit-SearchPath-6: index.php\n"
-"X-Poedit-SearchPath-7: singular.php\n"
-"X-Poedit-SearchPath-8: woocommerce.php\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: .git\n"
+"X-Poedit-SearchPathExcluded-1: assets\n"
+"X-Poedit-SearchPathExcluded-2: languages\n"
 
 #: content.php:37
 msgid "Sticky"
@@ -82,8 +77,8 @@ msgid "Color which will be used for highlighting certain texts (anchorts etc)."
 msgstr "Barva, která bude použita ke zvýraznění určitých textů (např. odkazy)."
 
 #: includes/Hamilton_Child_Customizer.php:132
-msgid "Show site description"
-msgstr "Zobrazit popis webu"
+msgid "Site description"
+msgstr "Popis webu"
 
 #: includes/Hamilton_Child_Customizer.php:133
 msgid "Check if you want to show site description just below the site title."
@@ -111,63 +106,73 @@ msgstr ""
 "Nastavte text patičky vaší stránky. Můžete použít i jednoduché <abbr title="
 "\"Hyper Text Markup Language\">HTML</abbr> značení."
 
+#: includes/Hamilton_Child_Customizer.php:160
+msgid "Cookies warning"
+msgstr "Varování o cookies"
+
 #: includes/Hamilton_Child_Customizer.php:161
+msgid "Check to show cookies warning which is required in some countries."
+msgstr ""
+"Zaškrtněte, pokud chcete zobrazovat varování o používání cookies, toto "
+"varování je v některých zemích povinné."
+
+#: includes/Hamilton_Child_Customizer.php:175
 msgid "Blog Page Display"
 msgstr "Zobrazení stránky blogu"
 
-#: includes/Hamilton_Child_Customizer.php:164
+#: includes/Hamilton_Child_Customizer.php:178
 msgid "Settings for how to display the <strong>Blog Page</strong>."
 msgstr "Nastavení pro zobrazení <strong>Stránky Blogu</strong>."
 
-#: includes/Hamilton_Child_Customizer.php:182
+#: includes/Hamilton_Child_Customizer.php:196
 msgid "Show category"
 msgstr "Zobrazit rubriky"
 
-#: includes/Hamilton_Child_Customizer.php:183
+#: includes/Hamilton_Child_Customizer.php:197
 msgid "Check to show post categories inside the posts previews."
 msgstr "Zaškrtněte,  pokud chcete zobrazit rubriky uvnitř ukázek příspěvků."
 
-#: includes/Hamilton_Child_Customizer.php:196
+#: includes/Hamilton_Child_Customizer.php:210
 msgid "Show date"
 msgstr "Zobrazit datum a čas"
 
-#: includes/Hamilton_Child_Customizer.php:197
+#: includes/Hamilton_Child_Customizer.php:211
 msgid "Check to show date and time in posts previews."
 msgstr ""
 "Zaškrtněte,  pokud chcete zobrazit datum a čas uvnitř ukázek příspěvků."
 
-#: includes/Hamilton_Child_Customizer.php:210
+#: includes/Hamilton_Child_Customizer.php:224
 msgid "Show excerpt"
 msgstr "Zobrazit výňatek"
 
-#: includes/Hamilton_Child_Customizer.php:211
+#: includes/Hamilton_Child_Customizer.php:225
 msgid "Check to show post excerpt inside the posts previews."
 msgstr "Zaškrtněte,  pokud chcete zobrazit výňatek uvnitř ukázek příspěvků."
 
-#: includes/Hamilton_Child_Customizer.php:224
+#: includes/Hamilton_Child_Customizer.php:238
 msgid "Show tags"
 msgstr "Zobrazit tagy"
 
-#: includes/Hamilton_Child_Customizer.php:225
+#: includes/Hamilton_Child_Customizer.php:239
 msgid "Check to show tags inside the posts previews."
 msgstr "Zaškrtněte,  pokud chcete zobrazit štítky uvnitř ukázek příspěvků."
 
-#: includes/Hamilton_Child_Customizer.php:238
+#: includes/Hamilton_Child_Customizer.php:252
 msgid "Show blog filter"
 msgstr "Zobrazit filtr"
 
-#: includes/Hamilton_Child_Customizer.php:239
+#: includes/Hamilton_Child_Customizer.php:253
 msgid ""
 "Check to show filter on <strong>Blog Page</strong> above the grid with posts."
 msgstr ""
 "Zaškrtněte, pokud chcete zobrazit filtr na <strong>Stránce Blogu</strong> "
 "přímo nad mřížkou s příspěvky."
 
-#: includes/Hamilton_Child_Customizer.php:252
+#: includes/Hamilton_Child_Customizer.php:266
 msgid "Login Page Display"
 msgstr "Zobrazení přihlašovací stránky"
 
-#: includes/Hamilton_Child_Customizer.php:255
+#: includes/Hamilton_Child_Customizer.php:269
 msgid ""
 "Settings for how to display the <strong>Login Page</strong> (show <a href=\"#"
 "\" class=\"wp-login-page-link\">Login Page</a>)."
@@ -175,43 +180,63 @@ msgstr ""
 "Nastavení, zobrazit stránku <strong>Přihlášení</strong> (zobrazit stránku <a "
 "href=\"#\" class=\"wp-login-page-link\">Přihlášení</a>)."
 
-#: includes/Hamilton_Child_Customizer.php:271
+#: includes/Hamilton_Child_Customizer.php:285
 msgid "Show logo"
 msgstr "Zobrazit logo"
 
-#: includes/Hamilton_Child_Customizer.php:272
+#: includes/Hamilton_Child_Customizer.php:286
 msgid ""
 "Check to show <strong>WordPress</strong> or custom logo above the login form."
 msgstr ""
 "Zaškrtněte, pokud chcete nad přihlašovacím formulářem zobrazit logo (ať už "
 "<strong>WordPress</strong> nebo jiné)."
 
-#: includes/Hamilton_Child_Customizer.php:301
+#: includes/Hamilton_Child_Customizer.php:316
 msgid "Shop Page Display"
 msgstr "Zobrazení stránky obchodu"
 
-#: includes/Hamilton_Child_Customizer.php:304
+#: includes/Hamilton_Child_Customizer.php:319
 msgid ""
 "Settings for how to display <strong>WooCommerce</strong> <em>Shop</em> page."
 msgstr "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku obchodu."
 
-#: includes/Hamilton_Child_Customizer.php:324
-msgid "Show pages title"
-msgstr "Zobrazit názvy stránek"
+#: includes/Hamilton_Child_Customizer.php:339
+msgid "Pages title"
+msgstr "Názvy stránek"
 
-#: includes/Hamilton_Child_Customizer.php:325
-msgid ""
-"Check to show titles on <strong>WooCommerce</strong> pages like <em>Shop</"
-"em>, <em>Cart</em> or <em>Checkout</em>."
+#: includes/Hamilton_Child_Customizer.php:340
+msgid "Check to show titles on <strong>WooCommerce</strong> pages."
 msgstr ""
-"Nastavení, jak zobrazit <strong>WooCommerce</strong> stránky, jako např. "
-"obchodu, košíku atp."
+"Zaškrtněte, pokud na stránkách <strong>WooCommerce</strong> chcete "
+"zobrazovat názvy stránek."
 
-#: includes/Hamilton_Child_Customizer.php:338
+#: includes/Hamilton_Child_Customizer.php:353
+msgid "Breadcrumbs"
+msgstr "Drobečková navigace"
+
+#: includes/Hamilton_Child_Customizer.php:354
+msgid "Check to show breadcrumbs on <strong>WooCommerce</strong> pages."
+msgstr ""
+"Zaškrtněte, pokud na stránkách <strong>WooCommerce</strong> chcete "
+"zobrazovat drobečkovou navigaci."
+
+#: includes/Hamilton_Child_Customizer.php:367
+msgid "Result count"
+msgstr "Počet výsledků"
+
+#: includes/Hamilton_Child_Customizer.php:368
+msgid ""
+"Check to show result count on <strong>WooCommerce</strong> page <em>Shop</"
+"em>."
+msgstr ""
+"Zaškrtněte, pokud na stránkách <strong>WooCommerce</strong> chcete "
+"zobrazovat počet zobrazených produktů."
+
+#: includes/Hamilton_Child_Customizer.php:381
 msgid "Fancy order select"
 msgstr "Lepší výběr řazení"
 
-#: includes/Hamilton_Child_Customizer.php:339
+#: includes/Hamilton_Child_Customizer.php:382
 msgid ""
 "Check to show fancy order select on <em>Shop</em> page instead of the "
 "default one (plain <em>select</em> input)."
@@ -219,11 +244,11 @@ msgstr ""
 "Zaškrtněte, pokud chcete zobrazovat hezčí výběr řazení namísto stávajícího "
 "(čistý <em>select</em> HTML element)."
 
-#: includes/Hamilton_Child_Customizer.php:352
+#: includes/Hamilton_Child_Customizer.php:395
 msgid "One-page shop"
 msgstr "Jedno-stránkový obchod"
 
-#: includes/Hamilton_Child_Customizer.php:353
+#: includes/Hamilton_Child_Customizer.php:396
 msgid ""
 "Check to turn your <em>Shop</em> page with pagination into one page with all "
 "your products (<strong>requires One-Page Shop Plugin</strong>)."
@@ -232,22 +257,22 @@ msgstr ""
 "moderní jedno stránkový obchod (<strong>vyžaduje One-Page Shop Plugin</"
 "strong>)."
 
-#: includes/Hamilton_Child_Customizer.php:367
+#: includes/Hamilton_Child_Customizer.php:409
 msgid "Cart Page Display"
 msgstr "Zobrazení stránky košíku"
 
-#: includes/Hamilton_Child_Customizer.php:370
+#: includes/Hamilton_Child_Customizer.php:412
 msgid ""
 "Settings for how to display <strong>WooCommerce</strong> <em>Cart</em> page."
 msgstr "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku košíku."
 
-#: includes/Hamilton_Child_Customizer.php:390
-#: includes/Hamilton_Child_Customizer.php:428
+#: includes/Hamilton_Child_Customizer.php:432
+#: includes/Hamilton_Child_Customizer.php:470
 msgid "Show coupon"
 msgstr "Zobrazit kupón"
 
-#: includes/Hamilton_Child_Customizer.php:391
-#: includes/Hamilton_Child_Customizer.php:429
+#: includes/Hamilton_Child_Customizer.php:433
+#: includes/Hamilton_Child_Customizer.php:471
 msgid ""
 "Check to show coupon field on <strong>Cart Page</strong> below the list of "
 "purchased items."
@@ -255,22 +280,22 @@ msgstr ""
 "Zaškrtněte, pokud chcete na stránce <strong>Košík</strong> zobrazit pole pro "
 "kupón pod seznamem s pořízenými položkami."
 
-#: includes/Hamilton_Child_Customizer.php:404
+#: includes/Hamilton_Child_Customizer.php:446
 msgid "Checkout Page Display"
 msgstr "Zobrazení stránky objednávky"
 
-#: includes/Hamilton_Child_Customizer.php:407
+#: includes/Hamilton_Child_Customizer.php:449
 msgid ""
 "Settings for how to display <strong>WooCommerce</strong> <em>Checkout</em> "
 "page."
 msgstr ""
 "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku objednávky."
 
-#: includes/Hamilton_Child_Customizer.php:442
+#: includes/Hamilton_Child_Customizer.php:484
 msgid "Shipping choice"
 msgstr "Volba dopravy"
 
-#: includes/Hamilton_Child_Customizer.php:443
+#: includes/Hamilton_Child_Customizer.php:485
 msgid ""
 "Check to show shipping choice form on <strong>Checkout Page</strong> as "
 "before on <strong>Cart Page</strong> page."
@@ -278,11 +303,12 @@ msgstr ""
 "Zaškrtněte, pokud chcete na stránce <strong>Objednávka</strong> zobrazit "
 "volby dopravy stejně jako předtím na stránce <strong>Košík</strong>."
 
-#: includes/Hamilton_Child_Customizer.php:456
+#: includes/Hamilton_Child_Customizer.php:498
 msgid "Account Page Display"
 msgstr "Zobrazení stránky Můj účet"
 
-#: includes/Hamilton_Child_Customizer.php:459
+#: includes/Hamilton_Child_Customizer.php:501
+#: includes/Hamilton_Child_Customizer.php:538
 msgid ""
 "Settings for how to display <strong>WooCommerce</strong> <em>Account</em> "
 "page."
@@ -290,11 +316,11 @@ msgstr ""
 "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku <em>Můj účet</"
 "em>."
 
-#: includes/Hamilton_Child_Customizer.php:479
+#: includes/Hamilton_Child_Customizer.php:521
 msgid "Hide Dashboard"
 msgstr "Skrýt nástěnku"
 
-#: includes/Hamilton_Child_Customizer.php:480
+#: includes/Hamilton_Child_Customizer.php:522
 msgid ""
 "Check to hide <strong>Dashboard</strong> on <strong>Account Page</strong> so "
 "the first pane become <strong>Orders</strong>."
@@ -302,6 +328,30 @@ msgstr ""
 "Zaškrtněte, pokud chcete na stránce <em>Můj účet</em> schovat panel "
 "<strong>Nástěnka</strong>, takže by se prvním stal panel <strong>Objednávky</"
 "strong>."
+
+#: includes/Hamilton_Child_Customizer.php:535
+msgid "Product Page Display"
+msgstr "Zobrazení stránky produktu"
+
+#: includes/Hamilton_Child_Customizer.php:558
+msgid "Count input"
+msgstr "Počet kusů"
+
+#: includes/Hamilton_Child_Customizer.php:559
+msgid "Check to show product count input on <strong>Product Page</strong>."
+msgstr ""
+"Zaškrtněte, pokud chcete na stránce <strong>Produkt</strong> zobrazovat "
+"vstup pro zadání počtu kusů."
+
+#: includes/Hamilton_Child_Customizer.php:572
+msgid "Categories"
+msgstr "Kategorie"
+
+#: includes/Hamilton_Child_Customizer.php:573
+msgid "Check to show product categories on <strong>Product Page</strong>."
+msgstr ""
+"Zaškrtněte, pokud chcete na stránce <strong>Produkt</strong> zobrazovat "
+"kategorie produktu."
 
 #: index.php:40
 #, php-format
@@ -342,6 +392,30 @@ msgstr "%s komentářů"
 #: singular.php:81
 msgid "Pages:"
 msgstr "Stránky:"
+
+#: woocommerce/loop/orderby.php:22
+msgid "Open product orderby menu"
+msgstr "Otevřít menu s nabídkou řazení."
+
+#: woocommerce/loop/orderby.php:28
+msgid "Close product orderby menu"
+msgstr "Zavřít menu s nabídkou řazení."
+
+#~ msgid "Cookie warning"
+#~ msgstr "Varování o cookies"
+
+#~ msgid "Show site description"
+#~ msgstr "Zobrazit popis webu"
+
+#~ msgid "Show pages title"
+#~ msgstr "Zobrazit názvy stránek"
+
+#~ msgid ""
+#~ "Check to show titles on <strong>WooCommerce</strong> pages like <em>Shop</"
+#~ "em>, <em>Cart</em> or <em>Checkout</em>."
+#~ msgstr ""
+#~ "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránky, jako např. "
+#~ "obchodu, košíku atp."
 
 #~ msgid ""
 #~ "Settings for how to display the <strong>Login Page</strong> &ndash; "

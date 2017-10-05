@@ -29,8 +29,8 @@
 		} );
 	} );
 
-	// Show site description
-	wp.customize( 'hamilton_child_show_site_description', function( value ) {
+	// Site description
+	wp.customize( 'hamilton_child_site_description', function( value ) {
 		value.bind( function( newval ) {
 			if ( newval == true ) {
 				$( '.site-description' ).css( 'display', 'block' );
@@ -44,6 +44,17 @@
 	wp.customize( 'hamilton_child_footer_text', function( value ) {
 		value.bind( function( newval ) {
 			$( '#hamilton_child_footer_text' ).html( newval );
+		} );
+	} );
+
+	// Cookie warning
+	wp.customize( 'hamilton_child_cookies_warning', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.cookie-warning' ).css( 'display', 'block' );
+			} else {
+				$( '.cookie-warning' ).css( 'display', 'none' );
+			}
 		} );
 	} );
 
@@ -98,6 +109,54 @@
 				$( '#hamilton_child_blog_filter' ).css( 'display', 'block' );
 			} else {
 				$( '#hamilton_child_blog_filter' ).css( 'display', 'none' );
+			}
+		} );
+	} );
+
+	// WC General: Page Title
+	wp.customize( 'hamilton_child_wc_pages_title', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.hamilton-child-wc-content-wrapper .page-title' ).css( 'display', 'block' );
+			} else {
+				$( '.hamilton-child-wc-content-wrapper .page-title' ).css( 'display', 'none' );
+			}
+		} );
+	} );
+
+	// WC General: Breadcrumbs
+	wp.customize( 'hamilton_child_wc_breadcrumbs', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.hamilton-child-wc-content-wrapper .woocommerce-breadcrumb' ).css( 'display', 'block' );
+			} else {
+				$( '.hamilton-child-wc-content-wrapper .woocommerce-breadcrumb' ).css( 'display', 'none' );
+			}
+		} );
+	} );
+
+	// WC General: Result count
+	wp.customize( 'hamilton_child_wc_result_count', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.hamilton-child-wc-content-wrapper .woocommerce-result-count' ).css( 'display', 'block' );
+			} else {
+				$( '.hamilton-child-wc-content-wrapper .woocommerce-result-count' ).css( 'display', 'none' );
+			}
+		} );
+	} );
+
+	// WP Shop: Fancy orderby
+	wp.customize( 'hamilton_child_wc_fancy_order_select' , function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '.woocommerce-ordering select[name="orderby"]' ).css( 'display', 'none' );
+				$( '.hamilton-child-wc-ordering' ).toggleClass( 'active' );
+				$( '#hamilton-child-ordering' ).css( 'display', 'block' );
+			} else {
+				$( '.hamilton-child-wc-ordering' ).toggleClass( 'active' );
+				$( '.woocommerce-ordering select[name="orderby"]' ).css( 'display', 'block' );
+				$( '#hamilton-child-ordering' ).css( 'display', 'none' );
 			}
 		} );
 	} );

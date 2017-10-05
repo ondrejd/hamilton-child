@@ -109,9 +109,11 @@ pre.code-snippet .style_127 { color: #657b83; }
  * Customize anchors in header
  */
 a, #hamilton_child_footer_text a { transition: all .6s ease-in-out; }
-.site-title a, .site-name, .alt-nav a { transition: none; }
+.site-title a, .site-name, .alt-nav a, .hamilton-child-wc-ordering ul a { transition: none; }
 .site-title a, .site-title a:hover, .site-title a:visited, .site-title a:active,
 .alt-nav a, .alt-nav a:hover, .alt-nav a:visited, .alt-nav a:active,
+.hamilton-child-wc-ordering ul a, .hamilton-child-wc-ordering ul a:hover,
+.hamilton-child-wc-ordering ul a:visited, .hamilton-child-wc-ordering ul a:active
 #hamilton_child_footer_text a, #hamilton_child_footer_text a:hover,
 #hamilton_child_footer_text a:visited, #hamilton_child_footer_text a:active {
     border-bottom: 0.25em solid transparent;
@@ -181,6 +183,105 @@ a, #hamilton_child_footer_text a { transition: all .6s ease-in-out; }
 }
 .posts-filters .post-categories li a {}
 .posts-views {}
+
+
+/**
+ * Fancy ordering
+ */
+#hamilton-child-ordering {
+    cursor: pointer;
+}
+#hamilton-child-ordering .dashicons,
+.hamilton-child-wc-ordering .dashicons {
+    height: 32px;
+    font-size: 32px;
+}
+#hamilton-child-ordering .dashicons {
+    float: right;
+}
+.hamilton-child-wc-ordering .dashicons {
+    cursor: pointer;
+    font-size: 32px;
+    position: absolute;
+    right: 80px;
+}
+.hamilton-child-wc-ordering {
+	background: #fff;
+	opacity: 0;
+	padding: 222px 0 120px;
+	position: fixed;
+		bottom: 0;
+		left: -99999px;
+		right: 99999px;
+		top: 0;
+	transform: translateY( 1rem );
+	transition: opacity .3s ease-in-out, transform .3s ease-in-out, left 0s .3s, right 0s .3s;
+	z-index: 9999;
+}
+.dark-mode .hamilton-child-wc-ordering {
+	background: #1d1d1d;
+}
+.hamilton-child-wc-ordering.active {
+	left: 0;
+	right: 0;
+	opacity: 1;
+	transform: translateY( 0 );
+	transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+.hamilton-child-wc-ordering .menus {
+	overflow: auto;
+	max-height: 100%;
+}
+.hamilton-child-wc-ordering .menus > ul {
+	float: left;
+	width: calc( 100% - 10px );
+}
+.hamilton-child-wc-ordering ul ul {
+	margin: 20px 0 0 40px;
+}
+.hamilton-child-wc-ordering ul + ul {
+	margin-left: 20px;
+}
+.hamilton-child-wc-ordering li {
+	display: block;
+	font-size: 40px;
+	font-weight: 300;
+	letter-spacing: -0.025em;
+	line-height: 1.1;
+	width: 100%;
+}
+.dark-mode .hamilton-child-wc-ordering li {
+	font-weight: 400;
+    padding-bottom: 0.25em;
+}
+.hamilton-child-wc-ordering li + li {
+	margin-top: 20px;
+}
+.hamilton-child-wc-ordering footer {
+	background: #fff;
+	padding: 50px 0;
+	position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+}
+.dark-mode .hamilton-child-wc-ordering footer {
+	background: #1d1d1d;
+}
+.hamilton-child-wc-ordering footer a {
+	color: inherit;
+	text-decoration: none;
+}
+.hamilton-child-wc-ordering footer p:first-child {
+	float: left;
+}
+.hamilton-child-wc-ordering footer p:last-child {
+	color: rgba( 0, 0, 0, .35 );
+	float: right;
+}
+.dark-mode .site-nav footer p:last-child {
+	color: rgba( 255, 255, 255, .35 );
+}
 
 /**
  * Different resolutions

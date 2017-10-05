@@ -119,17 +119,17 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
             $wp_customize->get_control( 'hamilton_alt_nav' )->priority = 10;
             $wp_customize->get_control( 'hamilton_home_title' )->priority = 30;
 
-            // Show site description
-            $wp_customize->add_setting( 'hamilton_child_show_site_description', [
+            // Site description
+            $wp_customize->add_setting( 'hamilton_child_site_description', [
                 'capability' 		=> 'edit_theme_options',
                 'default'           => false,
                 'sanitize_callback' => [__CLASS__, 'sanitize_checkbox'],
                 'transport'         => 'postMessage'
             ] );
-            $wp_customize->add_control( 'hamilton_child_show_site_description', [
+            $wp_customize->add_control( 'hamilton_child_site_description', [
                 'type'        => 'checkbox',
                 'section'     => 'hamilton_options',
-                'label'       => __( 'Show site description', 'hamilton-child' ),
+                'label'       => __( 'Site description', 'hamilton-child' ),
                 'description' => __( 'Check if you want to show site description just below the site title.', 'hamilton-child' ),
                 'priority'    => 20,
             ] );
@@ -146,6 +146,20 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'label'       => __( 'Footer text', 'hamilton-child' ),
                 'description' => __( 'Set your custom footer text. You can use also simple <abbr title="Hyper Text Markup Language">HTML</abbr>.', 'hamilton-child' ),
                 'priority'    => 40,
+            ] );
+
+            // Cookie warning
+            $wp_customize->add_setting( 'hamilton_child_cookies_warning', [
+                'default'           => false,
+                'capability' 		=> 'edit_theme_options',
+                'transport'			=> 'postMessage'
+            ] );
+            $wp_customize->add_control( 'hamilton_child_cookies_warning', [
+                'type'        => 'checkbox',
+                'section'     => 'hamilton_options',
+                'label'       => __( 'Cookies warning', 'hamilton-child' ),
+                'description' => __( 'Check to show cookies warning which is required in some countries.', 'hamilton-child' ),
+                'priority'    => 21,
             ] );
         }
 
@@ -282,11 +296,12 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
          * @since 1.0.0
          */
         private static function register_woocommerce_support( $wp_customize ) {
-            // Our WooCommerce-aimed settings takes three sections:
+            // Our WooCommerce-aimed settings takes these sections:
             self::register_section_woocommerce_shop( $wp_customize );
             self::register_section_woocommerce_cart( $wp_customize );
             self::register_section_woocommerce_checkout( $wp_customize );
             self::register_section_woocommerce_account( $wp_customize );
+            self::register_section_woocommerce_product( $wp_customize );
         }
 
         /**
@@ -313,7 +328,7 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
 
             // Show shop pages title
             $wp_customize->add_setting( 'hamilton_child_wc_pages_title', [
-                'default'           => true,
+                'default'           => false,
                 'capability' 		=> 'edit_theme_options',
                 'sanitize_callback' => [__CLASS__, 'sanitize_checkbox'],
                 'transport'			=> 'postMessage'
@@ -321,8 +336,36 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
             $wp_customize->add_control( 'hamilton_child_wc_pages_title', [
                 'type'        => 'checkbox',
                 'section'     => 'hamilton_child_woocommerce_shop',
-                'label'       => __( 'Show pages title', 'hamilton-child' ),
-                'description' => __( 'Check to show titles on <strong>WooCommerce</strong> pages like <em>Shop</em>, <em>Cart</em> or <em>Checkout</em>.', 'hamilton-child' ),
+                'label'       => __( 'Pages title', 'hamilton-child' ),
+                'description' => __( 'Check to show titles on <strong>WooCommerce</strong> pages.', 'hamilton-child' ),
+            ] );
+
+            // Breadcrumbs
+            $wp_customize->add_setting( 'hamilton_child_wc_breadcrumbs', [
+                'default'           => false,
+                'capability' 		=> 'edit_theme_options',
+                'sanitize_callback' => [__CLASS__, 'sanitize_checkbox'],
+                'transport'			=> 'postMessage'
+            ] );
+            $wp_customize->add_control( 'hamilton_child_wc_breadcrumbs', [
+                'type'        => 'checkbox',
+                'section'     => 'hamilton_child_woocommerce_shop',
+                'label'       => __( 'Breadcrumbs', 'hamilton-child' ),
+                'description' => __( 'Check to show breadcrumbs on <strong>WooCommerce</strong> pages.', 'hamilton-child' ),
+            ] );
+
+            // Result count
+            $wp_customize->add_setting( 'hamilton_child_wc_result_count', [
+                'default'           => false,
+                'capability' 		=> 'edit_theme_options',
+                'sanitize_callback' => [__CLASS__, 'sanitize_checkbox'],
+                'transport'			=> 'postMessage'
+            ] );
+            $wp_customize->add_control( 'hamilton_child_wc_result_count', [
+                'type'        => 'checkbox',
+                'section'     => 'hamilton_child_woocommerce_shop',
+                'label'       => __( 'Result count', 'hamilton-child' ),
+                'description' => __( 'Check to show result count on <strong>WooCommerce</strong> page <em>Shop</em>.', 'hamilton-child' ),
             ] );
 
             // Show fancy order select
@@ -347,11 +390,10 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'transport'			=> 'postMessage'
             ] );
             $wp_customize->add_control( 'hamilton_child_wc_one_page', [
-                'type'        => 'checkbox',
-                'section'     => 'hamilton_child_woocommerce_shop',
-                'label'       => __( 'One-page shop', 'hamilton-child' ),
-                'description' => __( 'Check to turn your <em>Shop</em> page with pagination into one page with all your products (<strong>requires One-Page Shop Plugin</strong>).', 'hamilton-child' ),
-                'disabled'    => true,
+                'type'            => 'checkbox',
+                'section'         => 'hamilton_child_woocommerce_shop',
+                'label'           => __( 'One-page shop', 'hamilton-child' ),
+                'description'     => __( 'Check to turn your <em>Shop</em> page with pagination into one page with all your products (<strong>requires One-Page Shop Plugin</strong>).', 'hamilton-child' ),
             ] );
         }
 
@@ -482,6 +524,57 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
         }
 
         /**
+         * @internal Creates "Product Page Display" section in Theme Customizer.
+         * @param WP_Customize_Manager $wp_customize
+         * @return void
+         * @since 1.0.0
+         */
+        private static function register_section_woocommerce_product( $wp_customize ) {
+            // Add section self
+            $wp_customize->add_section(	'hamilton_child_woocommerce_product', [
+                'title'       => __( 'Product Page Display', 'hamilton-child' ),
+                'priority'    => 130,
+                'capability'  => 'edit_theme_options',
+                'description' => __( 'Settings for how to display <strong>WooCommerce</strong> <em>Account</em> page.', 'hamilton-child' ),
+                'active_callback' => function() {
+                    if( function_exists( 'is_product' ) ) {
+                        return is_product();
+                    } else {
+                        return false;
+                    }
+                },
+            ] );
+
+            // Hide count input
+            $wp_customize->add_setting( 'hamilton_child_wc_product_count_input', [
+                'default'           => false,
+                'capability' 		=> 'edit_theme_options',
+                'sanitize_callback' => [__CLASS__, 'sanitize_checkbox'],
+                'transport'			=> 'postMessage'
+            ] );
+            $wp_customize->add_control( 'hamilton_child_wc_product_count_input', [
+                'type'        => 'checkbox',
+                'section'     => 'hamilton_child_woocommerce_product',
+                'label'       => __( 'Count input', 'hamilton-child' ),
+                'description' => __( 'Check to show product count input on <strong>Product Page</strong>.', 'hamilton-child' ),
+            ] );
+
+            // Hide categories
+            $wp_customize->add_setting( 'hamilton_child_wc_product_categories', [
+                'default'           => false,
+                'capability' 		=> 'edit_theme_options',
+                'sanitize_callback' => [__CLASS__, 'sanitize_checkbox'],
+                'transport'			=> 'postMessage'
+            ] );
+            $wp_customize->add_control( 'hamilton_child_wc_product_categories', [
+                'type'        => 'checkbox',
+                'section'     => 'hamilton_child_woocommerce_product',
+                'label'       => __( 'Categories', 'hamilton-child' ),
+                'description' => __( 'Check to show product categories on <strong>Product Page</strong>.', 'hamilton-child' ),
+            ] );
+        }
+
+        /**
          * @internal Registers our JavaScript the live preview.
          * @return void
          * @since 1.0.0
@@ -510,18 +603,31 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
 /* Secondary background color */
 .missing-thumbnail .preview-image { background-color: <?php echo get_theme_mod( 'hamilton_child_bg_sec_color' ) ?>; }
 /* Foreground color */
-body, body *, body a { color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>; }
+body, body *, body a,
+#hamilton-child-ordering .dashicons,
+.hamilton-child-wc-ordering .dashicons {
+    color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>;
+}
 /* Site description */
-.site-description { display: <?php echo ( get_theme_mod( 'hamilton_child_show_site_description' ) ) ? 'block' : 'none'; ?>; }
+.site-description { display: <?php echo ( get_theme_mod( 'hamilton_child_site_description' ) ) ? 'block' : 'none'; ?>; }
+/* Cookie warning */
+.cookie-warning { display: <?php echo ( get_theme_mod( 'hamilton_child_cookies_warning' ) ) ? 'block' : 'none'; ?>; }
 /* Highlight color */
-.site-name, .site-title a, .alt-nav a { color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>; }
+.site-name, .site-title a, .alt-nav a, .hamilton-child-wc-ordering ul a {
+    color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>;
+}
 .site-title a:active, .site-title a:hover,
 .alt-nav a:active, .alt-nav a:hover,
+.hamilton-child-wc-ordering ul a:active, .hamilton-child-wc-ordering ul a:hover,
 #hamilton_child_footer_text a:active, #hamilton_child_footer_text a:hover {
     border-bottom: 0.25em solid <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>;
 }
 .dark-mode .entry-content a { border-bottom-color: <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>; }
 .dark-mode .entry-content a:hover { color: <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>; }
+#hamilton-child-ordering .dashicons:hover,
+.hamilton-child-wc-ordering .dashicons:hover {
+    color: <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>;
+}
 /* Preview Content: Category */
 .preview-header .preview-category { display: <?php echo ( get_theme_mod( 'hamilton_child_preview_show_category' ) ) ? 'block' : 'none'; ?>; }
 /* Preview Content: Date and Time */
@@ -532,7 +638,37 @@ body, body *, body a { color: <?php echo get_theme_mod( 'hamilton_child_fg_color
 .preview-header .preview-tags { display: <?php echo ( get_theme_mod( 'hamilton_child_preview_show_tags' ) ) ? 'block' : 'none'; ?>; }
 /* Show blog filter */
 #hamilton_child_blog_filter { display: <?php echo ( get_theme_mod( 'hamilton_child_blog_filter' ) ) ? 'block' : 'none'; ?>; }
+/* WC General: Page title */
+.hamilton-child-wc-content-wrapper .page-title { display: <?php echo ( get_theme_mod( 'hamilton_child_wc_pages_title' ) ) ? 'block' : 'none'; ?>; }
+/* WC General: Breadcrumbs */
+.hamilton-child-wc-content-wrapper .woocommerce-breadcrumb { display: <?php echo ( get_theme_mod( 'hamilton_child_wc_breadcrumbs' ) ) ? 'block' : 'none'; ?>; }
+/* WC General: Result count */
+.hamilton-child-wc-content-wrapper .woocommerce-result-count { display: <?php echo ( get_theme_mod( 'hamilton_child_wc_result_count' ) ) ? 'block' : 'none'; ?>; }
+/* WC Shop: Fancy Orderby */
+.woocommerce-ordering select[name="orderby"] { display: <?php echo ( get_theme_mod( 'hamilton_child_wc_fancy_order_select' ) ) ? 'none' : 'block'; ?>; }
+#hamilton-child-ordering { display: <?php echo ( get_theme_mod( 'hamilton_child_wc_fancy_order_select' ) ) ? 'block' : 'none'; ?>; }
 </style>
+<script type="text/javascript">
+jQuery( document ).ready( function( ) {
+    function toggleFancyOrderby() {
+        jQuery( '.hamilton-child-wc-ordering' ).toggleClass( 'active' );
+        jQuery( 'body' ).toggleClass( 'lock-screen' );
+    }
+    // Fancy Orderby
+    jQuery( '.hamilton-child-ordering-button' ).click( toggleFancyOrderby );
+    jQuery( '.hamilton-child-wc-ordering li a').click( function( e ) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleFancyOrderby();
+        var val = jQuery( this ).data( 'orderby' );
+        console.log( 'Orderby menu item "' + val + '" was clicked!' );
+        jQuery( 'select[name="orderby"]' ).val( val );
+        jQuery( 'select[name="orderby"] option' ).removeAttr( 'selected' );
+        jQuery( 'select[name="orderby"] option[value="' + val + '"]' ).attr( 'selected', 'selected' );
+        jQuery( 'form.woocommerce-ordering' ).submit();
+    } );
+} );
+</script>
 <?php
         }
 

@@ -27,11 +27,6 @@ if( ! function_exists( 'hamilton_child_setup' ) ) :
         register_nav_menu( 'social-menu', __( 'Social menu', 'hamilton-child' ) );
         // Add WooCommerce support
         add_theme_support( 'woocommerce' );
-        // XXX Add our actions hooks instead of the existing
-        //remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
-        //remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
-        //add_action( 'woocommerce_before_main_content', array( __CLASS__, 'output_content_wrapper' ), 10 );
-        //add_action( 'woocommerce_after_main_content', array( __CLASS__, 'output_content_wrapper_end' ), 10 );
     }
 endif;
 // Setup the theme
@@ -68,3 +63,6 @@ include( dirname( __FILE__ ) . '/includes/Hamilton_Child_Customizer.php' );
 
 // Include login page changes
 include( dirname( __FILE__) . '/includes/Hamilton_Child_Login_Customizer.php' );
+
+// Include login page changes
+include( dirname( __FILE__) . '/includes/Hamilton_Child_WC_Customizer.php' );
