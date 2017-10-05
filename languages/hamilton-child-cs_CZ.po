@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hamilton-child\n"
-"POT-Creation-Date: 2017-10-05 11:00+0200\n"
-"PO-Revision-Date: 2017-10-05 11:01+0200\n"
+"POT-Creation-Date: 2017-10-05 11:34+0200\n"
+"PO-Revision-Date: 2017-10-05 11:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ondřej Doněk <ondrejd@gmail.com>\n"
 "Language: cs_CZ\n"
@@ -233,10 +233,23 @@ msgstr ""
 "zobrazovat počet zobrazených produktů."
 
 #: includes/Hamilton_Child_Customizer.php:381
+msgid "Sidebar"
+msgstr "Boční panel"
+
+#: includes/Hamilton_Child_Customizer.php:382
+msgid ""
+"Check to show sidebar on <strong>WooCommerce</strong> page <em>Shop</em>. "
+"But consider other options because this theme does not use sidebars commonly."
+msgstr ""
+"Zaškrtněte, pokud chcete na <strong>WooCommerce</strong> stránce <em>Obchod</"
+"em> zobrazit boční panel. Toto téma běžně panely nepoužívá, proto jeho "
+"použití zvažte."
+
+#: includes/Hamilton_Child_Customizer.php:395
 msgid "Fancy order select"
 msgstr "Lepší výběr řazení"
 
-#: includes/Hamilton_Child_Customizer.php:382
+#: includes/Hamilton_Child_Customizer.php:396
 msgid ""
 "Check to show fancy order select on <em>Shop</em> page instead of the "
 "default one (plain <em>select</em> input)."
@@ -244,11 +257,11 @@ msgstr ""
 "Zaškrtněte, pokud chcete zobrazovat hezčí výběr řazení namísto stávajícího "
 "(čistý <em>select</em> HTML element)."
 
-#: includes/Hamilton_Child_Customizer.php:395
+#: includes/Hamilton_Child_Customizer.php:409
 msgid "One-page shop"
 msgstr "Jedno-stránkový obchod"
 
-#: includes/Hamilton_Child_Customizer.php:396
+#: includes/Hamilton_Child_Customizer.php:410
 msgid ""
 "Check to turn your <em>Shop</em> page with pagination into one page with all "
 "your products (<strong>requires One-Page Shop Plugin</strong>)."
@@ -257,22 +270,22 @@ msgstr ""
 "moderní jedno stránkový obchod (<strong>vyžaduje One-Page Shop Plugin</"
 "strong>)."
 
-#: includes/Hamilton_Child_Customizer.php:409
+#: includes/Hamilton_Child_Customizer.php:423
 msgid "Cart Page Display"
 msgstr "Zobrazení stránky košíku"
 
-#: includes/Hamilton_Child_Customizer.php:412
+#: includes/Hamilton_Child_Customizer.php:426
 msgid ""
 "Settings for how to display <strong>WooCommerce</strong> <em>Cart</em> page."
 msgstr "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku košíku."
 
-#: includes/Hamilton_Child_Customizer.php:432
-#: includes/Hamilton_Child_Customizer.php:470
+#: includes/Hamilton_Child_Customizer.php:446
+#: includes/Hamilton_Child_Customizer.php:484
 msgid "Show coupon"
 msgstr "Zobrazit kupón"
 
-#: includes/Hamilton_Child_Customizer.php:433
-#: includes/Hamilton_Child_Customizer.php:471
+#: includes/Hamilton_Child_Customizer.php:447
+#: includes/Hamilton_Child_Customizer.php:485
 msgid ""
 "Check to show coupon field on <strong>Cart Page</strong> below the list of "
 "purchased items."
@@ -280,22 +293,22 @@ msgstr ""
 "Zaškrtněte, pokud chcete na stránce <strong>Košík</strong> zobrazit pole pro "
 "kupón pod seznamem s pořízenými položkami."
 
-#: includes/Hamilton_Child_Customizer.php:446
+#: includes/Hamilton_Child_Customizer.php:460
 msgid "Checkout Page Display"
 msgstr "Zobrazení stránky objednávky"
 
-#: includes/Hamilton_Child_Customizer.php:449
+#: includes/Hamilton_Child_Customizer.php:463
 msgid ""
 "Settings for how to display <strong>WooCommerce</strong> <em>Checkout</em> "
 "page."
 msgstr ""
 "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku objednávky."
 
-#: includes/Hamilton_Child_Customizer.php:484
+#: includes/Hamilton_Child_Customizer.php:498
 msgid "Shipping choice"
 msgstr "Volba dopravy"
 
-#: includes/Hamilton_Child_Customizer.php:485
+#: includes/Hamilton_Child_Customizer.php:499
 msgid ""
 "Check to show shipping choice form on <strong>Checkout Page</strong> as "
 "before on <strong>Cart Page</strong> page."
@@ -303,12 +316,12 @@ msgstr ""
 "Zaškrtněte, pokud chcete na stránce <strong>Objednávka</strong> zobrazit "
 "volby dopravy stejně jako předtím na stránce <strong>Košík</strong>."
 
-#: includes/Hamilton_Child_Customizer.php:498
+#: includes/Hamilton_Child_Customizer.php:512
 msgid "Account Page Display"
 msgstr "Zobrazení stránky Můj účet"
 
-#: includes/Hamilton_Child_Customizer.php:501
-#: includes/Hamilton_Child_Customizer.php:538
+#: includes/Hamilton_Child_Customizer.php:515
+#: includes/Hamilton_Child_Customizer.php:552
 msgid ""
 "Settings for how to display <strong>WooCommerce</strong> <em>Account</em> "
 "page."
@@ -316,11 +329,11 @@ msgstr ""
 "Nastavení, jak zobrazit <strong>WooCommerce</strong> stránku <em>Můj účet</"
 "em>."
 
-#: includes/Hamilton_Child_Customizer.php:521
+#: includes/Hamilton_Child_Customizer.php:535
 msgid "Hide Dashboard"
 msgstr "Skrýt nástěnku"
 
-#: includes/Hamilton_Child_Customizer.php:522
+#: includes/Hamilton_Child_Customizer.php:536
 msgid ""
 "Check to hide <strong>Dashboard</strong> on <strong>Account Page</strong> so "
 "the first pane become <strong>Orders</strong>."
@@ -329,25 +342,25 @@ msgstr ""
 "<strong>Nástěnka</strong>, takže by se prvním stal panel <strong>Objednávky</"
 "strong>."
 
-#: includes/Hamilton_Child_Customizer.php:535
+#: includes/Hamilton_Child_Customizer.php:549
 msgid "Product Page Display"
 msgstr "Zobrazení stránky produktu"
 
-#: includes/Hamilton_Child_Customizer.php:558
+#: includes/Hamilton_Child_Customizer.php:572
 msgid "Count input"
 msgstr "Počet kusů"
 
-#: includes/Hamilton_Child_Customizer.php:559
+#: includes/Hamilton_Child_Customizer.php:573
 msgid "Check to show product count input on <strong>Product Page</strong>."
 msgstr ""
 "Zaškrtněte, pokud chcete na stránce <strong>Produkt</strong> zobrazovat "
 "vstup pro zadání počtu kusů."
 
-#: includes/Hamilton_Child_Customizer.php:572
+#: includes/Hamilton_Child_Customizer.php:586
 msgid "Categories"
 msgstr "Kategorie"
 
-#: includes/Hamilton_Child_Customizer.php:573
+#: includes/Hamilton_Child_Customizer.php:587
 msgid "Check to show product categories on <strong>Product Page</strong>."
 msgstr ""
 "Zaškrtněte, pokud chcete na stránce <strong>Produkt</strong> zobrazovat "

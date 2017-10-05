@@ -29,7 +29,7 @@ Features which was crossed above are also here in _TODO_ list:
 + templates for some _custom post types_ from my plugins - _notice_ from plugin [Notices Generator][3], _project_ from [odwp-projects][4] and *odwpdp_cpt* from [Downloads Plugin][5],
 + __issues/bugs__:
   - when _fancy ordering_ is open main menu button should be hidden,
-  - _main_ menu items and _fancy_ordering_ menu items should have same `0.25em` border,
+  - _main_ menu items ~~and _fancy_ordering_ menu items~~ should have same `0.25em` border,
   - _fancy ordering_ menu should have same footer as _main_ menu,
   - closing button of the _fancy ordering_ menu should be at exact same place as opening button,
   - in `Hamilton_Child_Customizer::header_output()` should be CSS/JS output minified and cached.

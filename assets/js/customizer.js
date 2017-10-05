@@ -146,7 +146,7 @@
 		} );
 	} );
 
-	// WP Shop: Fancy orderby
+	// WC Shop Page: Fancy orderby
 	wp.customize( 'hamilton_child_wc_fancy_order_select' , function( value ) {
 		value.bind( function( newval ) {
 			if ( newval == true ) {
@@ -157,6 +157,17 @@
 				$( '.hamilton-child-wc-ordering' ).toggleClass( 'active' );
 				$( '.woocommerce-ordering select[name="orderby"]' ).css( 'display', 'block' );
 				$( '#hamilton-child-ordering' ).css( 'display', 'none' );
+			}
+		} );
+	} );
+
+	// WC Shop Page: Sidebar
+	wp.customize( 'hamilton_child_wc_sidebar', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval == true ) {
+				$( '#sidebar' ).css( 'display', 'block' );
+			} else {
+				$( '#sidebar' ).css( 'display', 'none' );
 			}
 		} );
 	} );

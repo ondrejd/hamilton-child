@@ -368,6 +368,20 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'description' => __( 'Check to show result count on <strong>WooCommerce</strong> page <em>Shop</em>.', 'hamilton-child' ),
             ] );
 
+            // Sidebar
+            $wp_customize->add_setting( 'hamilton_child_wc_sidebar', [
+                'default'           => false,
+                'capability' 		=> 'edit_theme_options',
+                'sanitize_callback' => [__CLASS__, 'sanitize_checkbox'],
+                'transport'			=> 'postMessage'
+            ] );
+            $wp_customize->add_control( 'hamilton_child_wc_sidebar', [
+                'type'        => 'checkbox',
+                'section'     => 'hamilton_child_woocommerce_shop',
+                'label'       => __( 'Sidebar', 'hamilton-child' ),
+                'description' => __( 'Check to show sidebar on <strong>WooCommerce</strong> page <em>Shop</em>. But consider other options because this theme does not use sidebars commonly.', 'hamilton-child' ),
+            ] );
+
             // Show fancy order select
             $wp_customize->add_setting( 'hamilton_child_wc_fancy_order_select', [
                 'default'           => false,
@@ -647,6 +661,8 @@ body, body *, body a,
 /* WC Shop: Fancy Orderby */
 .woocommerce-ordering select[name="orderby"] { display: <?php echo ( get_theme_mod( 'hamilton_child_wc_fancy_order_select' ) ) ? 'none' : 'block'; ?>; }
 #hamilton-child-ordering { display: <?php echo ( get_theme_mod( 'hamilton_child_wc_fancy_order_select' ) ) ? 'block' : 'none'; ?>; }
+/* WC Shop: Sidebar */
+#sidebar { display: <?php echo ( get_theme_mod( 'hamilton_child_wc_sidebar' ) ) ? 'block' : 'none'; ?>; }
 </style>
 <script type="text/javascript">
 jQuery( document ).ready( function( ) {
