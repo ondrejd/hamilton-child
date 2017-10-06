@@ -45,7 +45,13 @@ pre.code-snippet .style_127 { color: #657b83; }
 /**
  * Site footer
  */
-#hamilton_child_footer_text { line-height: 1.45em; }
+.site-footer {
+    background-color: transparent;
+}
+.hamilton-child-footer-text {
+    line-height: 1.45em;
+}
+.dark-mode .hamilton-child-footer-text {}
 
 /**
  * Post previews (e.g. Blog)
@@ -104,18 +110,30 @@ pre.code-snippet .style_127 { color: #657b83; }
     top: -0.15em;
     left: -0.05em;
 }
+.post-preview:hover .preview-image::after, .show-preview-titles .post-preview .preview-image::after {
+    opacity: 0;
+    z-index: -1;
+}
+.preview-image::after {
+    background: none;
+}
+.three-columns-grid .post-preview header {
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    top: 1em;
+}
 
 /**
  * Customize anchors in header
  */
-a, #hamilton_child_footer_text a { transition: all .6s ease-in-out; }
-.site-title a, .site-name, .alt-nav a, .hamilton-child-wc-ordering ul a { transition: none; }
+a { transition: all .6s ease-in-out; }
 .site-title a, .site-title a:hover, .site-title a:visited, .site-title a:active,
 .alt-nav a, .alt-nav a:hover, .alt-nav a:visited, .alt-nav a:active,
 .hamilton-child-wc-ordering ul a, .hamilton-child-wc-ordering ul a:hover,
 .hamilton-child-wc-ordering ul a:visited, .hamilton-child-wc-ordering ul a:active
-#hamilton_child_footer_text a, #hamilton_child_footer_text a:hover,
-#hamilton_child_footer_text a:visited, #hamilton_child_footer_text a:active {
+.hamilton-child-footer-text a, .hamilton-child-footer-text a:hover,
+.hamilton-child-footer-text a:visited, .hamilton-child-footer-text a:active {
     border-bottom: 0.25em solid transparent;
     padding-bottom: 0.25em;
     text-decoration: none !important;
@@ -186,25 +204,111 @@ a, #hamilton_child_footer_text a { transition: all .6s ease-in-out; }
 
 
 /**
+ * Site navigation
+ */
+.site-nav {
+    background: #fff;
+    opacity: 0;
+    padding: 222px 0 120px;
+    position: fixed;
+    	bottom: 0;
+    	left: -99999px;
+    	right: 99999px;
+    	top: 0;
+    transform: translateY( 1rem );
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out, left 0s .3s, right 0s .3s;
+    z-index: 9999;
+}
+
+.dark-mode .site-nav { background: #1d1d1d; }
+.site-nav.active {
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transform: translateY( 0 );
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+.site-nav .menus {
+    overflow: auto;
+    max-height: 100%;
+}
+.site-nav .menus > ul {
+    float: left;
+    width: calc( 90% - 10px );
+}
+.site-nav ul ul { margin: 20px 0 0 40px; }
+.site-nav ul + ul { margin-left: 20px; }
+.site-nav li {
+    display: block;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    width: 100%;
+}
+.dark-mode .site-nav li { font-weight: 400; }
+.site-nav li + li { margin-top: 20px; }
+.site-nav ul a { border-bottom: 0.25em solid transparent; }
+.site-nav ul + ul a { color: inherit; }
+.dark-mode .site-nav ul + ul a { color: inherit; }
+.site-nav ul a:hover { text-decoration: none; }
+.site-nav ul:first-child a:hover,
+.site-nav ul:first-child .current-menu-item > a {
+    border-bottom-color: transparent;
+}
+.dark-mode .site-nav ul:first-child a:hover,
+.dark-mode .site-nav ul:first-child .current-menu-item > a {
+    border-bottom-color: transparent;
+}
+.site-nav ul:last-child a:hover,
+.site-nav ul:last-child .current-menu-item > a {
+    border-bottom-color: transparent;
+}
+.dark-mode .site-nav ul:last-child a:hover,
+.dark-mode .site-nav ul:last-child .current-menu-item > a {
+    border-bottom-color: transparent;
+}
+.site-nav footer {
+    background: #fff;
+    padding: 50px 0;
+    position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+}
+.dark-mode .site-nav footer { background: #1d1d1d; }
+.site-nav footer a { color: inherit; text-decoration: none; }
+.site-nav footer p { color: #ffffff; }
+.site-nav footer p:first-child { float: none; }
+.site-nav footer p:last-child { float: none; }
+.dark-mode .site-nav footer p:last-child { color: #ffffff; }
+
+
+/**
  * Fancy ordering
  */
-#hamilton-child-ordering {
-    cursor: pointer;
+#hamilton-child-ordering, #hamilton-child-ordering-2 {
+    display: block;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -32px;
+    width: 32px;
+    z-index: 999999;
+}
+#hamilton-child-ordering-2 {
+    position: absolute;
+    right: 90px;
 }
 #hamilton-child-ordering .dashicons,
 .hamilton-child-wc-ordering .dashicons {
+    cursor: pointer;
     height: 32px;
     font-size: 32px;
 }
-#hamilton-child-ordering .dashicons {
-    float: right;
-}
-.hamilton-child-wc-ordering .dashicons {
-    cursor: pointer;
-    font-size: 32px;
-    position: absolute;
-    right: 80px;
-}
+#hamilton-child-ordering .dashicons {}
+.hamilton-child-wc-ordering .dashicons {}
 .hamilton-child-wc-ordering {
 	background: #fff;
 	opacity: 0;
@@ -234,7 +338,7 @@ a, #hamilton_child_footer_text a { transition: all .6s ease-in-out; }
 }
 .hamilton-child-wc-ordering .menus > ul {
 	float: left;
-	width: calc( 100% - 10px );
+	width: calc( 90% - 10px );
 }
 .hamilton-child-wc-ordering ul ul {
 	margin: 20px 0 0 40px;
@@ -284,18 +388,33 @@ a, #hamilton_child_footer_text a { transition: all .6s ease-in-out; }
 }
 
 /**
+ * WooCommerce customizations
+ */
+.woocommerce span.onsale {
+    left: auto;
+    padding: 0.25em;
+    right: 0;
+    top: 0;
+}
+.woocommerce h2.woocommerce-loop-product__title {
+    position: absolute;
+    top: -0.4em;
+}
+
+
+/**
  * Different resolutions
  */
 @media ( max-width: 400px ) {
     .site-header { padding: 35px 0; }
     .site-footer { padding: 50px 0 35px 0; }
     .page-header { margin-bottom: 35px; min-height: 150px; }
-    #hamilton_child_footer_text { font-size: 0.8em; }
+    .hamilton-child-footer-text { font-size: 0.8em; }
     a { transition: none ! important; }
     .site-title a, .site-title a:hover, .site-title a:visited, .site-title a:active,
     .alt-nav a, .alt-nav a:hover, .alt-nav a:visited, .alt-nav a:active,
-    #hamilton_child_footer_text a, #hamilton_child_footer_text a:hover,
-    #hamilton_child_footer_text a:visited, #hamilton_child_footer_text a:active {
+    .hamilton-child-footer-text a, .hamilton-child-footer-text a:hover,
+    .hamilton-child-footer-text a:visited, .hamilton-child-footer-text a:active {
         border-bottom-width: 0.20em;
         padding-bottom: 0.06em;
     }

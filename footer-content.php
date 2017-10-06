@@ -11,8 +11,9 @@ if( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-get_template_part( 'footer-content' );
-wp_footer();
 ?>
-    </body>
-</html>
+            <footer class="site-footer">
+                <div class="section-inner">
+                    <p class="hamilton-child-footer-text"><?php echo get_theme_mod( 'hamilton_child_footer_text' ) ?></p>
+                </div>
+            </footer>

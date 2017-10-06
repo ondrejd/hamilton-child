@@ -131,7 +131,7 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'section'     => 'hamilton_options',
                 'label'       => __( 'Site description', 'hamilton-child' ),
                 'description' => __( 'Check if you want to show site description just below the site title.', 'hamilton-child' ),
-                'priority'    => 20,
+                'priority'    => 11,
             ] );
 
             // Footer text
@@ -159,7 +159,7 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'section'     => 'hamilton_options',
                 'label'       => __( 'Cookies warning', 'hamilton-child' ),
                 'description' => __( 'Check to show cookies warning which is required in some countries.', 'hamilton-child' ),
-                'priority'    => 21,
+                'priority'    => 12,
             ] );
         }
 
@@ -178,10 +178,6 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'description'     => __( 'Settings for how to display the <strong>Blog Page</strong>.', 'hamilton-child' ),
                 'active_callback' => function() { return ( is_home() && ! is_front_page() ); },
             ] );
-
-            // Move two settings from the "Theme Options" section
-            $wp_customize->get_control( 'hamilton_max_columns' )->section = 'hamilton_child_blog_page_display';
-            $wp_customize->get_control( 'hamilton_show_titles' )->section = 'hamilton_child_blog_page_display';
 
             // Preview content: show categories
             $wp_customize->add_setting( 'hamilton_child_preview_show_category', [
@@ -382,7 +378,7 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
                 'description' => __( 'Check to show sidebar on <strong>WooCommerce</strong> page <em>Shop</em>. But consider other options because this theme does not use sidebars commonly.', 'hamilton-child' ),
             ] );
 
-            // Show fancy order select
+            // Fancy orderby
             $wp_customize->add_setting( 'hamilton_child_wc_fancy_order_select', [
                 'default'           => false,
                 'capability' 		=> 'edit_theme_options',
@@ -392,8 +388,8 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
             $wp_customize->add_control( 'hamilton_child_wc_fancy_order_select', [
                 'type'        => 'checkbox',
                 'section'     => 'hamilton_child_woocommerce_shop',
-                'label'       => __( 'Fancy order select', 'hamilton-child' ),
-                'description' => __( 'Check to show fancy order select on <em>Shop</em> page instead of the default one (plain <em>select</em> input).', 'hamilton-child' ),
+                'label'       => __( 'Fancy orderby select', 'hamilton-child' ),
+                'description' => __( 'Check to show fancy <em>orderby</em> select on <em>Shop</em> page instead of the default one (plain <em>select</em> input).', 'hamilton-child' ),
             ] );
 
             // Use one-page shop
@@ -614,12 +610,14 @@ if( ! class_exists( 'Hamilton_Child_Customizer' ) ) :
         public static function header_output() {
 ?>
 <style type='text/css'>
+/* Primary background color */
+.site-nav, .site-nav *, .site-footer, .site-footer p { background-color: <?php echo get_theme_mod( 'background_color' ) ?>; }
 /* Secondary background color */
 .missing-thumbnail .preview-image { background-color: <?php echo get_theme_mod( 'hamilton_child_bg_sec_color' ) ?>; }
 /* Foreground color */
 body, body *, body a,
-#hamilton-child-ordering .dashicons,
-.hamilton-child-wc-ordering .dashicons {
+.site-name, .site-title a, .alt-nav a, .site-nav a, .hamilton-child-wc-ordering ul a,
+#hamilton-child-ordering .dashicons, .hamilton-child-wc-ordering .dashicons {
     color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>;
 }
 /* Site description */
@@ -627,17 +625,16 @@ body, body *, body a,
 /* Cookie warning */
 .cookie-warning { display: <?php echo ( get_theme_mod( 'hamilton_child_cookies_warning' ) ) ? 'block' : 'none'; ?>; }
 /* Highlight color */
-.site-name, .site-title a, .alt-nav a, .hamilton-child-wc-ordering ul a {
-    color: <?php echo get_theme_mod( 'hamilton_child_fg_color' ) ?>;
-}
 .site-title a:active, .site-title a:hover,
 .alt-nav a:active, .alt-nav a:hover,
+.site-nav a:active, .site-nav a:hover,
 .hamilton-child-wc-ordering ul a:active, .hamilton-child-wc-ordering ul a:hover,
-#hamilton_child_footer_text a:active, #hamilton_child_footer_text a:hover {
+.hamilton-child-footer-text a:active, .hamilton-child-footer-text a:hover {
     border-bottom: 0.25em solid <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>;
 }
 .dark-mode .entry-content a { border-bottom-color: <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>; }
-.dark-mode .entry-content a:hover { color: <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>; }
+.dark-mode .entry-content a:hover,
+.woocommerce-loop-product__title a, .woocommerce-loop-product__title a:active, .woocommerce-loop-product__title a:hover,
 #hamilton-child-ordering .dashicons:hover,
 .hamilton-child-wc-ordering .dashicons:hover {
     color: <?php echo get_theme_mod( 'hamilton_child_hg_color' ) ?>;

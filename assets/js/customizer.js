@@ -10,7 +10,7 @@
     // Secondary background color
 	wp.customize( 'hamilton_child_bg_sec_color', function( value ) {
 		value.bind( function( newval ) {
-			$( '.missing-thumbnail .preview-image' ).css( 'background-color', newval );
+			$( '.missing-thumbnail .preview-image, .site-footer' ).css( 'background-color', newval );
 
 		} );
 	} );
@@ -25,7 +25,10 @@
 	// Highlight color
 	wp.customize( 'hamilton_child_hg_color', function( value ) {
 		value.bind( function( newval ) {
-			$( 'body a:active, body a:hover' ).css( 'border-bottom', '0.25em solid ' + newval );
+			$( '.site-title a:active, .site-title a:hover, .alt-nav a:active, .alt-nav a:hover, .site-nav a:active, .site-nav a:hover, .hamilton-child-wc-ordering ul a:active, .hamilton-child-wc-ordering ul a:hover, .hamilton-child-footer-text a:active, .hamilton-child-footer-text a:hover' ).css( 'border-bottom', '0.25em solid ' + newval );
+			$( '#hamilton-child-ordering .dashicons:hover, .hamilton-child-wc-ordering .dashicons:hover' ).css( 'color', newval );
+			$( '.dark-mode .entry-content a' ).css( 'border-bottom-color', newval );
+			$( '.dark-mode .entry-content a:hover' ).css( 'color', newval );
 		} );
 	} );
 
@@ -43,7 +46,7 @@
 	// Footer text
 	wp.customize( 'hamilton_child_footer_text', function( value ) {
 		value.bind( function( newval ) {
-			$( '#hamilton_child_footer_text' ).html( newval );
+			$( '.hamilton-child-footer-text' ).html( newval );
 		} );
 	} );
 

@@ -7,12 +7,11 @@
  * @since 1.0.0
  */
 
-if( ! defined( 'ABSPATH' ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-get_template_part( 'footer-content' );
-wp_footer();
 ?>
-    </body>
-</html>
+<div class="section-inner">
+    <div class="posts products" id="posts">
+

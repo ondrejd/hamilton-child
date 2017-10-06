@@ -13,13 +13,13 @@ if( ! defined( 'ABSPATH' ) ) {
 
 ?><!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
-	<head>
-		<meta http-equiv="content-type" content="<?php bloginfo( 'html_type' ); ?>" charset="<?php bloginfo( 'charset' ); ?>" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <head>
+        <meta http-equiv="content-type" content="<?php bloginfo( 'html_type' ); ?>" charset="<?php bloginfo( 'charset' ); ?>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
         <link rel="profile" href="http://gmpg.org/xfn/11">
-		<?php wp_head() ?>
-	</head>
-	<body <?php body_class() ?>>
+        <?php wp_head() ?>
+    </head>
+    <body <?php body_class() ?>>
         <header class="section-inner site-header group">
 			<?php if ( function_exists( 'the_custom_logo' ) && get_theme_mod( 'custom_logo' ) ) :
 				$logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
@@ -84,14 +84,8 @@ if( ! defined( 'ABSPATH' ) ) {
 				endif;
 				?>
 			</ul>
-        </header> <!-- header -->
-		<?php
-		$bg_declaration = "";
-		if ( get_background_color() && get_background_color() != 'ffffff' ) {
-			$bg_declaration = ' style="background-color: #' . get_background_color() . ';"';
-		}
-		?>
-		<nav class="site-nav"<?php echo $bg_declaration; ?>>
+        </header>
+		<nav class="site-nav">
 			<div class="section-inner menus group">
 				<?php
 				if ( has_nav_menu( 'primary-menu' ) ) :
@@ -119,10 +113,5 @@ if( ! defined( 'ABSPATH' ) ) {
 				}
 				?>
 			</div>
-			<footer<?php echo $bg_declaration; ?>>
-				<div class="section-inner">
-					<p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>" class="site-name"><?php bloginfo( 'name' ); ?></a></p>
-					<p><?php _e( 'Theme by', 'hamilton' ); ?> <a href="http://www.andersnoren.se">Anders Nor&eacute;n</a></p>
-				</div>
-			</footer>
+            <?php get_template_part( 'footer-content' ) ?>
 		</nav>

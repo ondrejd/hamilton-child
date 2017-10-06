@@ -11,8 +11,5 @@ if( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-get_template_part( 'footer-content' );
-wp_footer();
-?>
-    </body>
-</html>
+// Empty sidebar file...
+
